@@ -13,18 +13,24 @@ import { useMapStore } from "../../../map/map-store";
 import { addTodayWatering } from "../../hooks/use-update-tree-waterings";
 
 const showHideWateringSuccessDialog = () => {
-	(
-		document.getElementById("watering-successful-alert") as HTMLDialogElement
-	).showModal();
-	setTimeout(() => {
-		(
-			document.getElementById("watering-successful-alert") as HTMLDialogElement
-		).close();
-	}, 2000);
+	const dialogElement = document.getElementById(
+		"watering-successful-alert",
+	) as HTMLDialogElement | null;
+	if (dialogElement) {
+		dialogElement.showModal();
+		setTimeout(() => {
+			dialogElement.close();
+		}, 2000);
+	}
 };
 
 const closeWateringDialog = () => {
-	(document.getElementById("water-dialog") as HTMLDialogElement).close();
+	const dialogElement = document.getElementById(
+		"water-dialog",
+	) as HTMLDialogElement | null;
+	if (dialogElement) {
+		dialogElement.close();
+	}
 };
 
 export const WateringDialog: React.FC = () => {

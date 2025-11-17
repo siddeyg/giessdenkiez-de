@@ -30,9 +30,12 @@ export const Register: React.FC = () => {
 				username: form.username.value,
 				password: form.password.value,
 			});
-			(
-				document.getElementById("register-alert-dialog") as HTMLDialogElement
-			).showModal();
+			const dialogElement = document.getElementById(
+				"register-alert-dialog",
+			) as HTMLDialogElement | null;
+			if (dialogElement) {
+				dialogElement.showModal();
+			}
 		} catch (error) {
 			if (getErrorMessage(error) === "User already registered") {
 				setIsEmailTaken(true);

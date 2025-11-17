@@ -74,7 +74,11 @@ export const useProfileStore = create<ProfileStore>()((set, get) => ({
 			throw error;
 		}
 
-		const currentUsername = await data[0].username;
+		if (!data || data.length === 0) {
+			throw new Error("No profile data found for user");
+		}
+
+		const currentUsername = data[0].username;
 		set({ username: currentUsername });
 	},
 
@@ -187,6 +191,10 @@ export const useProfileStore = create<ProfileStore>()((set, get) => ({
 		}
 
 		const userId = useAuthStore.getState().session?.user.id;
+
+		if (!userId) {
+			throw new Error("User ID not found - user may not be authenticated");
+		}
 
 		const { data, error } = await supabaseClient
 			.rpc("waterings_for_user", { u_id: userId })

@@ -52,13 +52,20 @@ export const LocationSearch: React.FC = () => {
 		setIsTextInSearchbar(true);
 	}, [isFilterViewVisible]);
 
-	map?.on("dragstart", function () {
-		clearSearchAndGeocodingResults();
-	});
+	useEffect(() => {
+		if (!map) return;
 
-	map?.on("click", function () {
-		clearSearchAndGeocodingResults();
-	});
+		const handleDragStart = () => clearSearchAndGeocodingResults();
+		const handleClick = () => clearSearchAndGeocodingResults();
+
+		map.on("dragstart", handleDragStart);
+		map.on("click", handleClick);
+
+		return () => {
+			map.off("dragstart", handleDragStart);
+			map.off("click", handleClick);
+		};
+	}, [map]);
 
 	const onGeocodingResultClick = (geocodingResult: GeocodingResult) => {
 		map?.easeTo({
@@ -80,17 +87,19 @@ export const LocationSearch: React.FC = () => {
 		const handleKeyPress = (event: KeyboardEvent) => {
 			if (event.key === "ArrowDown") {
 				setSelectedGeocodingResultIndex(
-					Math.min(
-						Math.max(0, geocodingResults.length - 1),
-						selectedGeocodingResultIndex + 1,
-					),
+					Math.min(geocodingResults.length - 1, selectedGeocodingResultIndex + 1),
 				);
 			} else if (event.key === "ArrowUp") {
 				setSelectedGeocodingResultIndex(
 					Math.max(0, selectedGeocodingResultIndex - 1),
 				);
 			} else if (event.key === "Enter") {
-				onGeocodingResultClick(geocodingResults[selectedGeocodingResultIndex]);
+				if (
+					selectedGeocodingResultIndex >= 0 &&
+					selectedGeocodingResultIndex < geocodingResults.length
+				) {
+					onGeocodingResultClick(geocodingResults[selectedGeocodingResultIndex]);
+				}
 			}
 		};
 

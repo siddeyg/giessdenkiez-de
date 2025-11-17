@@ -18,11 +18,12 @@ export const ForgotPassword: React.FC = () => {
 
 		try {
 			await forgotPassword(e.currentTarget.email.value);
-			(
-				document.getElementById(
-					"edit-passwort-alert-dialog",
-				) as HTMLDialogElement
-			).showModal();
+			const dialogElement = document.getElementById(
+				"edit-passwort-alert-dialog",
+			) as HTMLDialogElement | null;
+			if (dialogElement) {
+				dialogElement.showModal();
+			}
 		} catch (error) {
 			handleError(i18n.common.defaultErrorMessage, error);
 		}

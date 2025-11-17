@@ -210,6 +210,7 @@ export const useFilterStore = create<FilterState>()((set, get) => ({
 
 	resetFilters: () => {
 		useUrlState.getState().removeSearchParam(treeAgeUrlKeyMin);
+		useUrlState.getState().removeSearchParam(treeAgeUrlKeyMax);
 		useUrlState.getState().removeSearchParam(isPumpsVisibleUrlKey);
 		useUrlState.getState().removeSearchParam(areOnlyAllAdoptedTreesVisibleKey);
 		useUrlState.getState().removeSearchParam(areLastWateredTreesVisibleKey);
