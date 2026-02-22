@@ -5,14 +5,14 @@ import { useI18nStore } from "../../../../i18n/i18n-store";
 export const WaterProgressCircleWinter: React.FC = () => {
 	const i18n = useI18nStore().i18n();
 	return (
-		<div className="flex flex-row items-center justify-center gap-4 stroke-gdk-groundwater-blue relative">
+		<div className="flex flex-row items-center justify-center gap-4 relative">
 			<svg width={180} height={180}>
 				<circle
 					cx={90}
 					cy={90}
 					r={81}
 					fill="none"
-					stroke="currentStroke"
+					className="stroke-gdk-groundwater-blue"
 					strokeWidth="15"
 				></circle>
 			</svg>
