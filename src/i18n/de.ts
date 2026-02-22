@@ -397,7 +397,7 @@ Der Bezirk ${district} hat uns zusätzliche Informationen zur individuellen Gie�
 				id: "AHORN",
 				title: "Ahorn (Acer)",
 				description:
-					“Die Gattung der Ahorne ist mit ca. 21% des Gesamtbestandes der häufigste Straßenbaum in Bonn. Für den Standort „Straße” ist vor allem der Spitzahorn (Acer platanoides) geeignet. Die frühe Blüte und die bunte Herbstfärbung machen den Ahorn zu einer besonders beliebten Baumgattung.”,
+					"Die Gattung der Ahorne ist mit ca. 21% des Gesamtbestandes der häufigste Straßenbaum in Bonn. Für den Standort „Straße” ist vor allem der Spitzahorn (Acer platanoides) geeignet. Die frühe Blüte und die bunte Herbstfärbung machen den Ahorn zu einer besonders beliebten Baumgattung.",
 			},
 			{
 				id: "EICHE",
