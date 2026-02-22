@@ -8,6 +8,9 @@ export function useBerlinDistrictsGeojson() {
 		const abortController = new AbortController();
 
 		const fetchData = async () => {
+			if (!import.meta.env.VITE_BEZIRKE_URL) {
+				return;
+			}
 			const berlinBezirkeRaw = await fetch(import.meta.env.VITE_BEZIRKE_URL, {
 				signal: abortController.signal,
 			});
