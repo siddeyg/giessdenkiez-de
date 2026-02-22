@@ -136,10 +136,10 @@ export const de: Content = {
 		about: {
 			head: {
 				question: "Über das Projekt",
-				answer: `Die Folgen des Klimawandels, insbesondere die trockenen und heißen Sommer, belasten das Berliner Ökosystem. Unsere Stadtbäume vertrocknen und tragen langfristige Schäden davon: In den letzten Jahren mussten immer mehr Bäume gefällt werden und ihre Lebensdauer sinkt. Inzwischen wird die Bevölkerung regelmäßig zur Unterstützung aufgerufen, allerdings weitgehend unkoordiniert. Dies möchten wir ändern und mit diesem Projekt eine koordinierte Bürger*innenbeteiligung bei der Bewässerung städtischen Grüns ermöglichen.`,
+				answer: `Die Folgen des Klimawandels, insbesondere die trockenen und heißen Sommer, belasten das Bonner Ökosystem. Unsere Stadtbäume vertrocknen und tragen langfristige Schäden davon: In den letzten Jahren mussten immer mehr Bäume gefällt werden und ihre Lebensdauer sinkt. Inzwischen wird die Bevölkerung regelmäßig zur Unterstützung aufgerufen, allerdings weitgehend unkoordiniert. Dies möchten wir ändern und mit diesem Projekt eine koordinierte Bürger*innenbeteiligung bei der Bewässerung städtischen Grüns ermöglichen.`,
 
 				aboutUsTitle: "Über uns",
-				aboutUsAnswer: `„Gieß den Kiez” ist ein Projekt des [CityLAB Berlin](https://www.citylab-berlin.org/). Das CityLAB ist ein öffentliches Innovationslabor für die Stadt der Zukunft im ehemaligen Flughafen Berlin-Tempelhof. Gemeinsam mit einem großen Netzwerk aus Verwaltung, Zivilgesellschaft, Wissenschaft und Start-ups arbeiten wir hier an Ideen für ein lebenswertes Berlin. Das CityLAB ist ein Projekt der Technologiestiftung Berlin und wird gefördert durch die Berliner Senatskanzlei.`,
+				aboutUsAnswer: `„Gieß den Kiez” ist ein Projekt des [CityLAB Bonn](https://www.citylab-berlin.org/). Das CityLAB ist ein öffentliches Innovationslabor für die Stadt der Zukunft im ehemaligen Flughafen Bonn-Tempelhof. Gemeinsam mit einem großen Netzwerk aus Verwaltung, Zivilgesellschaft, Wissenschaft und Start-ups arbeiten wir hier an Ideen für ein lebenswertes Bonn. Das CityLAB ist ein Projekt der Technologiestiftung Bonn und wird gefördert durch die Bonner Senatskanzlei.`,
 				press: `Presseanfragen gehen am besten an [Anna Hantelmann](mailto:anna.hantelmann@ts.berlin?subject=giessdenkiez.de%20Presseanfrage">anna.hantelmann@ts.berlin).`,
 				communityTitle: "Community",
 				communityAnswer:
@@ -152,11 +152,11 @@ export const de: Content = {
 			qa: [
 				{
 					question: "Nützliche Links",
-					answer: `[Lieblingsbauminiative (Berlin)](https://www.lieblingsbaum-initiative.de/)
+					answer: `[Lieblingsbauminiative (Bonn)](https://www.lieblingsbaum-initiative.de/)
 
-[Stadtbaumkampagne (SenMVKU Berlin)](https://www.berlin.de/senuvk/umwelt/stadtgruen/stadtbaeume/kampagne/start.shtml)
+[Stadtbaumkampagne (SenMVKU Bonn)](https://www.berlin.de/senuvk/umwelt/stadtgruen/stadtbaeume/kampagne/start.shtml)
 
-[Bewässerungsempfehlung für Stadtbäume (Pflanzenschutzamt Berlin)](https://www.berlin.de/pflanzenschutzamt/stadtgruen/beratung/bewaesserungsempfehlung-fuer-stadtbaeume/)
+[Bewässerungsempfehlung für Stadtbäume (Pflanzenschutzamt Bonn)](https://www.berlin.de/pflanzenschutzamt/stadtgruen/beratung/bewaesserungsempfehlung-fuer-stadtbaeume/)
 
 [Gießen bei Trockenheit (Baumpflegeportal)](https://www.baumpflegeportal.de/baumpflege/trockenheit-duerre-wann-baeume-giessen/)
 
@@ -166,11 +166,11 @@ export const de: Content = {
 				},
 				{
 					question: "Datenquellen",
-					answer: `Die Karte zeigt einen Großteil der Berliner Straßen- und Anlagenbäume (967.365; Stand: März 2025). Zusätzlich wird abgebildet, wie viel Niederschlag in den letzten 30 Tagen bei jedem Baum gefallen ist und ob diese in der Zeit bereits gegossen wurden. Aus verschiedenen Gründen sind leider noch nicht alle Berliner Stadtbäume aufgeführt. Wir arbeiten aber daran, die Datenlage zu verbessern und eine möglichst vollständige Darstellung des Berliner Baumbestandes zu erreichen. Die aktuellen Datenquellen sind:
+					answer: `Die Karte zeigt einen Großteil der Bonner Straßen- und Anlagenbäume (967.365; Stand: März 2025). Zusätzlich wird abgebildet, wie viel Niederschlag in den letzten 30 Tagen bei jedem Baum gefallen ist und ob diese in der Zeit bereits gegossen wurden. Aus verschiedenen Gründen sind leider noch nicht alle Bonner Stadtbäume aufgeführt. Wir arbeiten aber daran, die Datenlage zu verbessern und eine möglichst vollständige Darstellung des Bonner Baumbestandes zu erreichen. Die aktuellen Datenquellen sind:
 
-[Geoportal Berlin / Straßenbäume](https://fbinter.stadt-berlin.de/fb/berlin/service_intern.jsp?id=s_wfs_baumbestand@senstadt&type=WFS)
+[Geoportal Bonn / Straßenbäume](https://fbinter.stadt-berlin.de/fb/berlin/service_intern.jsp?id=s_wfs_baumbestand@senstadt&type=WFS)
 
-[Geoportal Berlin / Anlagenbäume](https://fbinter.stadt-berlin.de/fb/berlin/service_intern.jsp?id=s_wfs_baumbestand_an@senstadt&type=WFS)
+[Geoportal Bonn / Anlagenbäume](https://fbinter.stadt-berlin.de/fb/berlin/service_intern.jsp?id=s_wfs_baumbestand_an@senstadt&type=WFS)
 
 Regendaten von [Deutscher Wetterdienst](https://www.dwd.de/)
 
@@ -188,7 +188,7 @@ Pumpen aus [Open Street Map](https://www.openstreetmap.de)`,
 					answer: `
 Informieren:
 
-Neugierig, welcher Baum vor Deiner Tür steht? Unsere interaktive Karte visualisiert über 800.000 Straßen- und Anlagenbäume Berlins. Wenn Du mehr über einen Baum erfahren willst, navigiere und zoome Dich zum gewünschten Standort und klicke auf den farbigen Punkt. Nun werden Dir im Menüband links zahlreiche Informationen zum ausgewählten Baum angezeigt.
+Neugierig, welcher Baum vor Deiner Tür steht? Unsere interaktive Karte visualisiert über 800.000 Straßen- und Anlagenbäume Bonns. Wenn Du mehr über einen Baum erfahren willst, navigiere und zoome Dich zum gewünschten Standort und klicke auf den farbigen Punkt. Nun werden Dir im Menüband links zahlreiche Informationen zum ausgewählten Baum angezeigt.
 
 Bäume bewässern und adoptieren:
 
@@ -202,25 +202,25 @@ Vernetzen:
 					question:
 						"Was kann ich tun, wenn Bäume nicht richtig eingetragen sind?",
 					answer:
-						"Wir beziehen den Baum-Datensatz mit allen Attributen wie bspw. Adresse, Baumart und Pflanzjahr je Baum aus dem Geoportal der Stadt Berlin, dem FIS-Broker. Das im Geoportal bereitgestellte Baumkataster basiert wiederum auf den bezirklich aggregierten Daten der Straßen- und Grünflächenämter. Es kann daher immer wieder vorkommen, dass Daten von Bäumen veraltet sind oder Eigenschaften der tagesaktuellen Realität abweichen. Leider können wir selbst keine Änderungen im Baumkataster vornehmen. Etwaige Abweichungen können nur direkt bei der zuständigen bezirklichen Behörde gemeldet werden. Einmal im Jahr veröffentlichen die Grünflächenämter aber ein aktualisiertes Baumkataster, das wir nach Veröffentlichung mit Gieß den Kiez verknüpfen.",
+						"Wir beziehen den Baum-Datensatz mit allen Attributen wie bspw. Adresse, Baumart und Pflanzjahr je Baum aus dem Geoportal der Stadt Bonn, dem FIS-Broker. Das im Geoportal bereitgestellte Baumkataster basiert wiederum auf den bezirklich aggregierten Daten der Straßen- und Grünflächenämter. Es kann daher immer wieder vorkommen, dass Daten von Bäumen veraltet sind oder Eigenschaften der tagesaktuellen Realität abweichen. Leider können wir selbst keine Änderungen im Baumkataster vornehmen. Etwaige Abweichungen können nur direkt bei der zuständigen bezirklichen Behörde gemeldet werden. Einmal im Jahr veröffentlichen die Grünflächenämter aber ein aktualisiertes Baumkataster, das wir nach Veröffentlichung mit Gieß den Kiez verknüpfen.",
 				},
 				{
 					question: "Warum sollte ich aktiv werden und Bäume gießen?",
-					answer: `Die langanhaltenden Dürre- und Hitzeperioden der letzten zwei Jahre haben dem Stadtgrün Berlins immens zugesetzt. Wenngleich nicht nur auf Trockenschäden zurückzuführen, mussten allein im Zeitraum zwischen 2018 und 2019 über 7.000 Bäume gefällt werden.
-Die Straßen- und Grünflächenämter gießen regelmäßig mehrere tausend Bäume, kommen allerdings mit dem Gießen während Berliner Hitze-Sommern nicht hinterher. Da die Grünflächenämter bezirklich organisiert sind, arbeitet jeder Bezirk etwas anders, sodass eine ganzheitliche und bedarfsgerechte Koordination durchaus mit Hürden verbunden ist. Durch die Plattform möchten wir auch Bürger:innen die Möglichkeit geben, Bäumen gezielt auf Grundlage ihrer aktuellen Wasserversorgung zu helfen und sich zu informieren. Ziel ist es, möglichst viele Bäume durch nachbarschaftliches Engagement zu retten.`,
+					answer: `Die langanhaltenden Dürre- und Hitzeperioden der letzten zwei Jahre haben dem Stadtgrün Bonns immens zugesetzt. Wenngleich nicht nur auf Trockenschäden zurückzuführen, mussten allein im Zeitraum zwischen 2018 und 2019 über 7.000 Bäume gefällt werden.
+Die Straßen- und Grünflächenämter gießen regelmäßig mehrere tausend Bäume, kommen allerdings mit dem Gießen während Bonner Hitze-Sommern nicht hinterher. Da die Grünflächenämter bezirklich organisiert sind, arbeitet jeder Bezirk etwas anders, sodass eine ganzheitliche und bedarfsgerechte Koordination durchaus mit Hürden verbunden ist. Durch die Plattform möchten wir auch Bürger:innen die Möglichkeit geben, Bäumen gezielt auf Grundlage ihrer aktuellen Wasserversorgung zu helfen und sich zu informieren. Ziel ist es, möglichst viele Bäume durch nachbarschaftliches Engagement zu retten.`,
 				},
 				{
 					question: "Wie gieße ich richtig?",
 					answer: `
-Je nach Alter, Standort und Baumart benötigen Bäume unterschiedlich viel Wasser. Insbesondere Jungbäume (0-10 Jahre) sind in Zeiten von Trockenheit, Strahlung und Hitze auf eine regelmäßige Wässerung angewiesen. Die bezirklichen Grünflächenämter in Berlin versorgen Jungbäume in der Regel bis zu einem Alter von 5 Jahren, wodurch besondern Junbäume im Alter zwischen 5 und 10 Jahren unsere Aufmerksamkeit benötigen.
+Je nach Alter, Standort und Baumart benötigen Bäume unterschiedlich viel Wasser. Insbesondere Jungbäume (0-10 Jahre) sind in Zeiten von Trockenheit, Strahlung und Hitze auf eine regelmäßige Wässerung angewiesen. Die bezirklichen Grünflächenämter in Bonn versorgen Jungbäume in der Regel bis zu einem Alter von 5 Jahren, wodurch besondern Junbäume im Alter zwischen 5 und 10 Jahren unsere Aufmerksamkeit benötigen.
 
-Vor jeder Gießung solltet ihr euch den Baum zunächst anschauen und überlegen ob der Baum wirklich Wasser benötigt. Wichtige Indikatoren für bedarfsgerechtes gießen sind bspw. das Alter (jung/alt), der Stammunfang (dünn/dick), der Standort (sonnig/schattig) oder die Beschaffenheit frischer Triebe (kahl/grün) eines Baumes. Bevor ihr mit dem gießen loslegt, empfehlen wir den ausgetrockneten Boden vor dem Gießen aufzulockern, sodass das Wasser in den Boden eindringen kann und nicht oberirdisch abläuft oder sich falsch anstaut. Angelehnt an das Berliner [Handbuch Gute Pflege](https://www.berlin.de/sen/uvk/natur-und-gruen/stadtgruen/pflegen-und-unterhalten/handbuch-gute-pflege), solltet ihr lieber selten, dafür mit größeren Menge an Wasser zu gießen. Das Handbuch empfiehlt für frisch gepflanzte Bäume bis zu 200l pro Gießung. So sorgt ihr dafür, dass die Bodenfeuchte auch in der Tiefe erhöht wird.
+Vor jeder Gießung solltet ihr euch den Baum zunächst anschauen und überlegen ob der Baum wirklich Wasser benötigt. Wichtige Indikatoren für bedarfsgerechtes gießen sind bspw. das Alter (jung/alt), der Stammunfang (dünn/dick), der Standort (sonnig/schattig) oder die Beschaffenheit frischer Triebe (kahl/grün) eines Baumes. Bevor ihr mit dem gießen loslegt, empfehlen wir den ausgetrockneten Boden vor dem Gießen aufzulockern, sodass das Wasser in den Boden eindringen kann und nicht oberirdisch abläuft oder sich falsch anstaut. Angelehnt an das Bonner [Handbuch Gute Pflege](https://www.berlin.de/sen/uvk/natur-und-gruen/stadtgruen/pflegen-und-unterhalten/handbuch-gute-pflege), solltet ihr lieber selten, dafür mit größeren Menge an Wasser zu gießen. Das Handbuch empfiehlt für frisch gepflanzte Bäume bis zu 200l pro Gießung. So sorgt ihr dafür, dass die Bodenfeuchte auch in der Tiefe erhöht wird.
 Auch zu empfehlen sind sogenannte Gießsäcke aus denen das Wasser nur sehr langsam austritt, kaum oberflächlich abläuft und somit kontinuierlich in den Boden sickert.
 					`,
 				},
 				{
 					question: "Wie gehe ich mit der Wasserknappheit um?",
-					answer: `In Zeiten von Trockenheit und Wasserknappheit ist es besonders wichtig, sparsam mit Wasser umzugehen. Wenn Du Deinen Baum gießen möchtest, dann frage dich zunächst immer, welcher Baum den größten Bedarf hat. Gieße lieber seltener, dafür aber mit größeren Mengen Wasser. So wird der Baum dazu angeregt, tiefere Wurzeln zu bilden und ist besser gegen Trockenheit gewappnet. Um eine Übersicht über aktuelle Bodenfeuchte in Berlin zu bekommen, lohnt sich ein Blick in die [Bewässerungsempfehlung für Stadtbäume](https://www.berlin.de/pflanzenschutzamt/stadtgruen/beratung/bewaesserungsempfehlung-fuer-stadtbaeume/) des Pflanzenschutzamt Berlins. Versuche das Wasser der öffentlichen Straßenpumpen, statt Trinkwasser aus der Hausleitung zu nutzen. Langfristig lohnt es sich, Regenwasser aufzufangen und in Regentonnen zu speichern. Nachbarschatsinitiativen wie [Wassertanke](https://wassertanke.org/) helfen Euch bei deratigen Nachbarschaftsprojekten.`,
+					answer: `In Zeiten von Trockenheit und Wasserknappheit ist es besonders wichtig, sparsam mit Wasser umzugehen. Wenn Du Deinen Baum gießen möchtest, dann frage dich zunächst immer, welcher Baum den größten Bedarf hat. Gieße lieber seltener, dafür aber mit größeren Mengen Wasser. So wird der Baum dazu angeregt, tiefere Wurzeln zu bilden und ist besser gegen Trockenheit gewappnet. Um eine Übersicht über aktuelle Bodenfeuchte in Bonn zu bekommen, lohnt sich ein Blick in die [Bewässerungsempfehlung für Stadtbäume](https://www.berlin.de/pflanzenschutzamt/stadtgruen/beratung/bewaesserungsempfehlung-fuer-stadtbaeume/) des Pflanzenschutzamt Bonns. Versuche das Wasser der öffentlichen Straßenpumpen, statt Trinkwasser aus der Hausleitung zu nutzen. Langfristig lohnt es sich, Regenwasser aufzufangen und in Regentonnen zu speichern. Nachbarschatsinitiativen wie [Wassertanke](https://wassertanke.org/) helfen Euch bei deratigen Nachbarschaftsprojekten.`,
 				},
 				{
 					question:
@@ -250,9 +250,9 @@ Auch zu empfehlen sind sogenannte Gießsäcke aus denen das Wasser nur sehr lang
 					answer: `Das FAQ konnte Dir nicht weiterhelfen oder Du hast eine komplexere Anfrage? Dann schreib uns eine [E-Mail](mailto:giessdenkiez@citylab-berlin.org)`,
 				},
 				{
-					question: "Warum werden nicht alle Bäume Berlins angezeigt?",
+					question: "Warum werden nicht alle Bäume Bonns angezeigt?",
 					answer:
-						"Gieß den Kiez baut auf dem Baumkataster auf. Das Baumkataster ist ein Verzeichnis der Stadt, in dem (Stadt-/Straßen- oder Park-)Bäume verwaltet werden und das durch die Straßen- und Grünflächenämter bereitgestellt wird. Das Straßen- und Grünflächenamt ist aber nicht für alle Bäume Berlins zuständig. Die Bäume im Plänterwald beispielsweise unterliegen dem Forstamt. Diese Bäume tauchen daher bei Gieß den Kiez nicht auf.",
+						"Gieß den Kiez baut auf dem Baumkataster auf. Das Baumkataster ist ein Verzeichnis der Stadt, in dem (Stadt-/Straßen- oder Park-)Bäume verwaltet werden und das durch die Straßen- und Grünflächenämter bereitgestellt wird. Das Straßen- und Grünflächenamt ist aber nicht für alle Bäume Bonns zuständig. Die Bäume im Plänterwald beispielsweise unterliegen dem Forstamt. Diese Bäume tauchen daher bei Gieß den Kiez nicht auf.",
 				},
 			],
 		},
@@ -260,7 +260,7 @@ Auch zu empfehlen sind sogenannte Gießsäcke aus denen das Wasser nur sehr lang
 			title:
 				"Teile Gieß den Kiez mit Deinem Umfeld und hilf uns die Gieß-Community zu vergrößern:",
 			content:
-				"Auf Gieß den Kiez kannst Du Dich über den Berliner Baumbestand erkundigen, durstige Bäume finden, und eintragen, wann Du diese gegossen hast!",
+				"Auf Gieß den Kiez kannst Du Dich über den Bonner Baumbestand erkundigen, durstige Bäume finden, und eintragen, wann Du diese gegossen hast!",
 			openSource:
 				"Gieß den Kiez ist ein [Open Source Projekt](https://github.com/technologiestiftung/giessdenkiez-de)!",
 		},
@@ -403,31 +403,31 @@ Der Bezirk ${district} hat uns zusätzliche Informationen zur individuellen Gie�
 				id: "EICHE",
 				title: "Eiche (Quercus)",
 				description:
-					"Der Anteil der Eichen beträgt rund 9% des Gesamtbestandes. In Berlin wird vor allem die Stiel-Eiche (Quercus robur) angepflanzt. Als Lichtbaum ist die Eiche nicht für enge Straßen geeignet. Die jüngsten Alleen im Parlaments- und Regierungsviertel wurden mit der sog. Spree-Eiche (Quercus palustris) bepflanzt, die sich u.a. durch ihre besonders schöne Herbstfärbung auszeichnet.",
+					"Der Anteil der Eichen beträgt rund 9% des Gesamtbestandes. In Bonn wird vor allem die Stiel-Eiche (Quercus robur) angepflanzt. Als Lichtbaum ist die Eiche nicht für enge Straßen geeignet. Die jüngsten Alleen im Parlaments- und Regierungsviertel wurden mit der sog. Spree-Eiche (Quercus palustris) bepflanzt, die sich u.a. durch ihre besonders schöne Herbstfärbung auszeichnet.",
 			},
 			{
 				id: "PLATANE",
 				title: "Platane (Platanus)",
 				description:
-					"Ein idealer Alleebaum für breite Straßen ist die Platane (Platanus acerifolia), die neben einer Höhe von 20 bis 30 m auch einen stattlichen Kronendurchmesser von 15 bis 20 m erreichen kann. Am Gesamtbestand haben die Platanen einen Anteil von etwa 6%. Die bekannteste und mit über 120 Jahren älteste Platanenallee in Berlin ist die Puschkinallee in Berlin-Treptow.",
+					"Ein idealer Alleebaum für breite Straßen ist die Platane (Platanus acerifolia), die neben einer Höhe von 20 bis 30 m auch einen stattlichen Kronendurchmesser von 15 bis 20 m erreichen kann. Am Gesamtbestand haben die Platanen einen Anteil von etwa 6%. Die bekannteste und mit über 120 Jahren älteste Platanenallee in Bonn ist die Puschkinallee in Bonn-Treptow.",
 			},
 			{
 				id: "KASTANIE",
 				title: "Kastanie (Aesculus)",
 				description:
-					"Die Kastanie (Aesculus) hat einen Anteil von ca. 5% am Gesamtbestand, und belegt damit den fünften Platz unter den Berliner Straßenbäumen. Rosskastanien haben fünf- und mehrgliedrige Blätter, die an die Finger einer Hand erinnern; Esskastanien haben einzelne Blätter, die überdies deutlich gezackt sind.",
+					"Die Kastanie (Aesculus) hat einen Anteil von ca. 5% am Gesamtbestand, und belegt damit den fünften Platz unter den Bonner Straßenbäumen. Rosskastanien haben fünf- und mehrgliedrige Blätter, die an die Finger einer Hand erinnern; Esskastanien haben einzelne Blätter, die überdies deutlich gezackt sind.",
 			},
 			{
 				id: "ROSSKASTANIE",
 				title: "Rosskastanie (Aesculus hippocastanum)",
 				description:
-					"Die Rosskastanie (Aesculus hippocastanum) hat einen Anteil von ca. 5% am Gesamtbestand, und belegt damit den fünften Platz unter den Berliner Straßenbäumen. Rosskastanien haben fünf- und mehrgliedrige Blätter, die an die Finger einer Hand erinnern; Esskastanien haben einzelne Blätter, die überdies deutlich gezackt sind.",
+					"Die Rosskastanie (Aesculus hippocastanum) hat einen Anteil von ca. 5% am Gesamtbestand, und belegt damit den fünften Platz unter den Bonner Straßenbäumen. Rosskastanien haben fünf- und mehrgliedrige Blätter, die an die Finger einer Hand erinnern; Esskastanien haben einzelne Blätter, die überdies deutlich gezackt sind.",
 			},
 			{
 				id: "ESCHE",
 				title: "Esche (Fraxinus)",
 				description:
-					"Die Esche (Fraxinus) hat einen Anteil von ca. 3% am Gesamtbestand, und belegt damit den sechsten Platz unter den Berliner Straßenbäumen. Mit einer Wuchshöhe von bis zu 40 m zählt sie zu den höchsten Laubbäumen Europas.",
+					"Die Esche (Fraxinus) hat einen Anteil von ca. 3% am Gesamtbestand, und belegt damit den sechsten Platz unter den Bonner Straßenbäumen. Mit einer Wuchshöhe von bis zu 40 m zählt sie zu den höchsten Laubbäumen Europas.",
 			},
 			{
 				id: "BIRKE",
@@ -439,13 +439,13 @@ Der Bezirk ${district} hat uns zusätzliche Informationen zur individuellen Gie�
 				id: "ROBINIE",
 				title: "Robinie (Robinia)",
 				description:
-					"Die Robinie (Robinia) hat einen Anteil von ca. 2% am Gesamtbestand. Sie wurde ab 1672 im Berliner Lustgarten als Parkbaum kultiviert und ist heute in ganz Berlin sehr häufig. Die Robinie stellt nur geringe Anforderungen an den Boden, und sie kann dank der Knöllchenbakterien an ihren Wurzeln Luftstickstoff bindenden und düngt damit den Boden auf.",
+					"Die Robinie (Robinia) hat einen Anteil von ca. 2% am Gesamtbestand. Sie wurde ab 1672 im Bonner Lustgarten als Parkbaum kultiviert und ist heute in ganz Bonn sehr häufig. Die Robinie stellt nur geringe Anforderungen an den Boden, und sie kann dank der Knöllchenbakterien an ihren Wurzeln Luftstickstoff bindenden und düngt damit den Boden auf.",
 			},
 			{
 				id: "HASEL",
 				title: "Hasel Baum (Corylus)",
 				description:
-					"Der Hasel Baum (Corylus) hat einen Anteil von ca. 2% am Gesamtbestand, und ist somit der neunt häufigste Straßenbaum in Berlin. Die Haselnuss wächst als Strauch oder kleiner Baum bis zu 6 m hoch.",
+					"Der Hasel Baum (Corylus) hat einen Anteil von ca. 2% am Gesamtbestand, und ist somit der neunt häufigste Straßenbaum in Bonn. Die Haselnuss wächst als Strauch oder kleiner Baum bis zu 6 m hoch.",
 			},
 			{
 				id: "HAINBUCHE",
@@ -457,7 +457,7 @@ Der Bezirk ${district} hat uns zusätzliche Informationen zur individuellen Gie�
 				id: "PAPPEL",
 				title: "Pappel (Populus)",
 				description:
-					"Die Pappel (Populus) hat einen Anteil von ca. 2% am Berliner Gesamtbestand. Sie haben eiförmige bis dreieckige, teils herzförmige Laubblätter.",
+					"Die Pappel (Populus) hat einen Anteil von ca. 2% am Bonner Gesamtbestand. Sie haben eiförmige bis dreieckige, teils herzförmige Laubblätter.",
 			},
 			{
 				id: "ULME",
@@ -525,11 +525,11 @@ Der Bezirk ${district} hat uns zusätzliche Informationen zur individuellen Gie�
 	},
 	splash: {
 		headline:
-			"Die Berliner Stadtbäume leiden unter Trockenheit und Du kannst ihnen helfen!",
+			"Die Bonner Stadtbäume leiden unter Trockenheit und Du kannst ihnen helfen!",
 		subheadlineWinter: `Derzeit sind die Bäume quasi im Winterschlaf und benötigen kein zusätzliches Wasser.
 **Ab März startet die Gießsaison dann wieder, und zwar volle Kanne!**`,
 		subheadline:
-			"Erkundige Dich über den Wasserbedarf der Bäume in Deiner Nachbarschaft, adoptiere den Baum vor Deiner Haustür und werde Teil der aktiven Gieß-Community in Berlin!",
+			"Erkundige Dich über den Wasserbedarf der Bäume in Deiner Nachbarschaft, adoptiere den Baum vor Deiner Haustür und werde Teil der aktiven Gieß-Community in Bonn!",
 		actionTitle: "Los geht's",
 		actionTitleWinter: "Erkunden!",
 		discoverTitle: "Entdecken",
@@ -537,7 +537,7 @@ Der Bezirk ${district} hat uns zusätzliche Informationen zur individuellen Gie�
 			"Die Karte visualisiert über 900.000 Stadtbäume (Stand 2025) und zeigt Informationen zu Art, Alter und Wasserbedarf an. Nutze die Filter- und Suchfunktionen, um schnell einen Überblick zu erhalten.",
 		waterTitle: "Gießen",
 		waterContent:
-			"Schnapp Dir eine Gießkanne und werde Teil der Gieß-Community! Bereits über tausend Aktive haben sich für die Bäume Berlins zusammengeschlossen und tragen ihre Gießungen regelmäßig ein.",
+			"Schnapp Dir eine Gießkanne und werde Teil der Gieß-Community! Bereits über tausend Aktive haben sich für die Bäume Bonns zusammengeschlossen und tragen ihre Gießungen regelmäßig ein.",
 		adoptTitle: "Adoptieren",
 		adoptContent:
 			"Durch das Adoptieren eines Baumes - oder auch mehrerer - lässt Du Deine Nachbarschaft wissen, dass für diese Bäume gesorgt wird. So gelingt ein koordiniertes Engagement.",
@@ -551,11 +551,11 @@ Der Bezirk ${district} hat uns zusätzliche Informationen zur individuellen Gie�
 		letsGo: "Los geht's",
 	},
 	loading: {
-		mapLoading: "Wir laden gerade 967.365 Bäume aus dem Berliner Baumbestand.",
+		mapLoading: "Wir laden gerade 967.365 Bäume aus dem Bonner Baumbestand.",
 		treeLoading: "Lade Bauminformationen...",
 	},
 	stats: {
-		title: "Statistiken Berlin",
+		title: "Statistiken Bonn",
 		subtitle: "Gieß den Kiez in Zahlen",
 		streetTrees: "Stadtbäume",
 		publicPumps: "Öffentliche Pumpen",
@@ -567,7 +567,7 @@ Der Bezirk ${district} hat uns zusätzliche Informationen zur individuellen Gie�
 			unit: "mal",
 			legend: "Anzahl der Gießungen",
 			hint: (currentYear) => `wurde im Jahr ${currentYear} gegossen.`,
-			backContent: `Die Gießaktivität variiert in den zwölf Berliner Bezirken je nach ehrenamtlichem Engagement. In einigen Bezirken haben sich engagierte Anwohner:innen bereits zu Gießgruppen organisiert ([Slack Community](https://giessdenkiez.slack.com/ssb/redirect)).
+			backContent: `Die Gießaktivität variiert in den zwölf Bonner Bezirken je nach ehrenamtlichem Engagement. In einigen Bezirken haben sich engagierte Anwohner:innen bereits zu Gießgruppen organisiert ([Slack Community](https://giessdenkiez.slack.com/ssb/redirect)).
 
 Zudem ist der Bedarf der bezirklichen [Straßen- und Grünflächenamt (SGA)](https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/) unterschiedlich. Um bestmöglich zu helfen, sollte man das zuständige SGA zuvor kontaktieren - und schon kann es losgehen.`,
 		},
@@ -582,7 +582,7 @@ Zudem ist der Bedarf der bezirklichen [Straßen- und Grünflächenamt (SGA)](htt
 			backContent: `Über stolze 2 Millionen Liter wurden bereits ehrenamtlich gegossen!
 
 
-“Je mehr desto besser” gilt jedoch nicht immer angesichts immer größerer Wasserknappheit. Und das weiß die Berliner Gieß-Community natürlich, und ist daher hauptsächlich dann aktiv wenn die Bäume tatsächlich durstig sind: während der  Vegetationsperiode (April-Oktober) in besonders heißen trockenen Jahren.
+“Je mehr desto besser” gilt jedoch nicht immer angesichts immer größerer Wasserknappheit. Und das weiß die Bonner Gieß-Community natürlich, und ist daher hauptsächlich dann aktiv wenn die Bäume tatsächlich durstig sind: während der  Vegetationsperiode (April-Oktober) in besonders heißen trockenen Jahren.
 
 Datenquelle: [Wetterdaten (DWD)](https://opendata.dwd.de/)`,
 		},
@@ -601,16 +601,16 @@ Aber Achtung! Jungbäume können auch überwässert werden. Mehr Informationen z
 		treeSpeciesStat: {
 			title: "Baumarten",
 			unit: "Baumarten",
-			hint: () => `stehen in Berlin.`,
+			hint: () => `stehen in Bonn.`,
 			other: "Andere",
-			legend: "Anteile Berliner Baumbestand",
-			backContent: `Berlin ist vielfältig - inklusive der Bäume!
+			legend: "Anteile Bonner Baumbestand",
+			backContent: `Bonn ist vielfältig - inklusive der Bäume!
 
 Diese Übersicht zeigt die zwanzig häufigsten Arten, jeweils zusammengefasst nach der übergreifenden Gattung.
 
 Die [Gieß den Kiez Karte](https://www.giessdenkiez.de/map) zeigt die volle Pracht, und somit fast 900.000 Stadtbäume, mit Infos zu Art, Alter und Wasserbedarf. Nutze die Filter und Suche, um mehr über die Bäume in Deiner Nachbarschaft zu erfahren.
 
-Datenquelle: [Berliner Baumkataster (Geoportal Berlin)](https://daten.berlin.de/datensaetze/baumbestand-berlin-wms )`,
+Datenquelle: [Bonner Baumkataster (Geoportal Bonn)](https://daten.berlin.de/datensaetze/baumbestand-berlin-wms )`,
 		},
 		adoptionStat: {
 			title: "Baumadoptionen",
