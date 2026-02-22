@@ -105,7 +105,10 @@ export function useMapSetup(
 			).then(() => {
 				initializedMap.addSource("pumps", {
 					type: "geojson",
-					data: import.meta.env.VITE_MAP_PUMPS_SOURCE_URL,
+					data: import.meta.env.VITE_MAP_PUMPS_SOURCE_URL || {
+						type: "FeatureCollection",
+						features: [],
+					},
 					promoteId: "id",
 				});
 
