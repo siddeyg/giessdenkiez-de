@@ -37,6 +37,10 @@ export const LineChart: React.FC = () => {
 		[yearlyData, height, svgMargin],
 	);
 
+	if (yearlyData.length === 0) {
+		return <div className="relative" id="area-container" />;
+	}
+
 	return (
 		<div className="relative" id="area-container">
 			<svg width={width} height={height}>
