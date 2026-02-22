@@ -42,9 +42,15 @@ export const TreeDetail: React.FC = () => {
 	const { treeAge, treeAgeClassification } =
 		useTreeAgeClassification(treeCoreData);
 	const treeTypeInfo = useMemo(() => {
-		return i18n.treeDetail.treeTypeInfos.find(
-			(treeType) => treeType.id === treeCoreData?.gattung_deutsch,
+		if (!treeCoreData?.gattung_deutsch) return undefined;
+		const gattung = treeCoreData.gattung_deutsch.toUpperCase();
+		// Sort longest ID first so ROSSKASTANIE is matched before KASTANIE.
+		// Substring match handles Bonn-style species names ("Spitz-Ahorn" → AHORN)
+		// and Berlin-style uppercase genus names ("AHORN" → AHORN) equally.
+		const sorted = [...i18n.treeDetail.treeTypeInfos].sort(
+			(a, b) => b.id.length - a.id.length,
 		);
+		return sorted.find((t) => gattung.includes(t.id));
 	}, [treeCoreData, i18n]);
 
 	const onClose = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
