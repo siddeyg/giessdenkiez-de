@@ -75,7 +75,7 @@ export function useMapSetup(
 			});
 
 			initializedMap.addLayer({
-				id: "trees",
+				id: "gdk-trees",
 				type: "circle",
 				source: "trees",
 				"source-layer": import.meta.env.VITE_MAPBOX_TREES_TILESET_LAYER,
@@ -139,25 +139,29 @@ export function useMapSetup(
 					},
 				});
 			});
-			// Hide 3D tree models rendered by the Mapbox Standard style.
-			// These come from OSM/Mapbox data and are visually confusing because
-			// they look like clickable trees but are not GDK features.
-			// GDK tree circles (the "trees" layer) remain unaffected.
-			initializedMap
-				.getStyle()
-				?.layers.filter((layer) => layer.type === "model")
-				.forEach((layer) => {
-					try {
-						initializedMap.setLayoutProperty(
-							layer.id,
-							"visibility",
-							"none",
-						);
-					} catch {
-						// Some Standard style layers may not support the
-						// visibility property; silently ignore those.
-					}
-				});
+			// The Mapbox Standard style has a model-type layer called "trees" that
+			// renders 3D tree models from OSM data. These are visually confusing
+			// because they look like GDK trees but have no GDK data behind them.
+			// Our GDK circle layer is named "gdk-trees" to avoid the ID conflict,
+			// so we can now directly target and hide the Standard style's "trees"
+			// model layer by its exact known ID.
+			// "building-models" (landmark 3D buildings) is intentionally kept visible.
+			const hideStandardStyleTreeModels = () => {
+				try {
+					initializedMap.setLayoutProperty(
+						"trees",
+						"visibility",
+						"none",
+					);
+				} catch {
+					// Layer may not be loaded yet; styledata listener will retry.
+				}
+			};
+			hideStandardStyleTreeModels();
+			// Re-apply on every style data update. The Standard style activates
+			// model tile layers dynamically when zooming to level ≥18, which can
+			// re-show the tree models after the initial hide.
+			initializedMap.on("styledata", hideStandardStyleTreeModels);
 
 			setIsMapLoaded(true);
 		});
