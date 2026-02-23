@@ -139,29 +139,25 @@ export function useMapSetup(
 					},
 				});
 			});
-			// The Mapbox Standard style has a model-type layer called "trees" that
-			// renders 3D tree models from OSM data. These are visually confusing
-			// because they look like GDK trees but have no GDK data behind them.
-			// Our GDK circle layer is named "gdk-trees" to avoid the ID conflict,
-			// so we can now directly target and hide the Standard style's "trees"
-			// model layer by its exact known ID.
-			// "building-models" (landmark 3D buildings) is intentionally kept visible.
-			const hideStandardStyleTreeModels = () => {
-				try {
-					initializedMap.setLayoutProperty(
-						"trees",
-						"visibility",
-						"none",
-					);
-				} catch {
-					// Layer may not be loaded yet; styledata listener will retry.
-				}
-			};
-			hideStandardStyleTreeModels();
-			// Re-apply on every style data update. The Standard style activates
-			// model tile layers dynamically when zooming to level ≥18, which can
-			// re-show the tree models after the initial hide.
-			initializedMap.on("styledata", hideStandardStyleTreeModels);
+			// Disable 3D tree models from the Mapbox Standard style.
+			// The Standard style's "trees" layer has visibility driven by a config
+			// expression: ["case",["all",["config","show3dTrees"],["config","show3dObjects"]],"visible","none"]
+			// setLayoutProperty cannot override a config expression — the style
+			// re-evaluates it every frame. setConfigProperty sets the underlying
+			// config value the expression reads, which is the only reliable override.
+			// "basemap" is the import ID Mapbox GL JS v3 assigns to the root Standard style.
+			// "building-models" (landmark 3D buildings) remains visible because
+			// show3dBuildings is left untouched.
+			try {
+				// eslint-disable-next-line @typescript-eslint/no-explicit-any
+				(initializedMap as any).setConfigProperty(
+					"basemap",
+					"show3dTrees",
+					false,
+				);
+			} catch {
+				// setConfigProperty not available if a non-Standard style is used; ignore.
+			}
 
 			setIsMapLoaded(true);
 		});
