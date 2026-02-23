@@ -165,11 +165,11 @@ export const en: Content = {
 				},
 				{
 					question: "Data sources",
-					answer: `The map shows the majority of Bonn's street trees (967,365; as of March 2025). It also shows how much precipitation has fallen on each tree in the last 30 days and whether users have watered them. Unfortunately, for various reasons, not all of Bonn's urban trees are listed yet. However, we are working on improving the data situation. The current data sources are the following:
+					answer: `The map shows the majority of Bonn's street trees (65,663; as of March 2025). It also shows how much precipitation has fallen on each tree in the last 30 days and whether users have watered them. Unfortunately, for various reasons, not all of Bonn's urban trees are listed yet. However, we are working on improving the data situation. The current data sources are the following:
 
-[Geoportal Bonn / Street trees](https://fbinter.stadt-berlin.de/fb/berlin/service_intern.jsp?id=s_wfs_baumbestand@senstadt&type=WFS)
+[Geoportal Bonn / Street trees](https://opendata.bonn.de/dataset/strasenbaume)
 
-[Geoportal Bonn / Plant trees](https://fbinter.stadt-berlin.de/fb/berlin/service_intern.jsp?id=s_wfs_baumbestand_an@senstadt&type=WFS)
+[Geoportal Bonn / Plant trees](https://opendata.bonn.de/dataset/anlagenbaume)
 
 Precipitation from [German Weather Service](https://www.dwd.de/)
 
@@ -541,7 +541,7 @@ The district ${district} has provided us with additional information on the indi
 	},
 	loading: {
 		mapLoading:
-			"We are currently loading 967,365 trees from the Bonn tree population.",
+			"We are currently loading 65,663 trees from the Bonn tree population.",
 		treeLoading: "Loading tree information...",
 	},
 	stats: {
@@ -595,9 +595,9 @@ But be careful! Young trees can also be overwatered. More information on [wateri
 
 This overview shows the twenty most common species, each summarized according to the overarching tree genus.
 
-The [Gieß den Kiez map](https://www.giessdenkiez.de/map) shows the full splendor, and thus nearly 900,000 city trees, with information on species, age and water requirements. Use the filters and search to find out more about the trees in your neighborhood.
+The [Gieß den Kiez map](https://www.giessdenkiez.de/map) shows the full splendor, and thus 65,663 city trees, with information on species, age and water requirements. Use the filters and search to find out more about the trees in your neighborhood.
 
-Data source: [Bonn tree cadastre (Geoportal Bonn)](https://daten.berlin.de/datensaetze/baumbestand-berlin-wms )`,
+Data source: [Bonn tree cadastre (Geoportal Bonn)](https://opendata.bonn.de/)`,
 		},
 		adoptionStat: {
 			title: "Tree adoptions",

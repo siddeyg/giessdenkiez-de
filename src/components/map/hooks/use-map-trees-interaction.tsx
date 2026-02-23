@@ -145,14 +145,21 @@ export function useMapTreesInteraction(map: mapboxgl.Map | undefined) {
 			map.getCanvas().style.cursor = "pointer";
 		});
 
-		map.on("click", "trees", (e) => {
-			if (!map || !e.features) {
+		// Use a general click handler with queryRenderedFeatures instead of a
+		// layer-specific click handler. This ensures GDK tree circles are found
+		// even when the Mapbox Standard style renders a 3D tree model on top of
+		// them — layer-specific events would not fire in that case.
+		map.on("click", (e) => {
+			if (!map) {
 				return;
 			}
-			if (e.features?.length === 0) {
-				setHoveredTreeId(undefined);
+			const treeFeatures = map.queryRenderedFeatures(e.point, {
+				layers: ["trees"],
+			});
+			if (!treeFeatures || treeFeatures.length === 0) {
+				return;
 			}
-			const treeFeature = e.features[0];
+			const treeFeature = treeFeatures[0];
 
 			setSelectedPump(undefined);
 			setHoveredPump(undefined);

@@ -166,11 +166,11 @@ export const de: Content = {
 				},
 				{
 					question: "Datenquellen",
-					answer: `Die Karte zeigt einen Großteil der Bonner Straßen- und Anlagenbäume (967.365; Stand: März 2025). Zusätzlich wird abgebildet, wie viel Niederschlag in den letzten 30 Tagen bei jedem Baum gefallen ist und ob diese in der Zeit bereits gegossen wurden. Aus verschiedenen Gründen sind leider noch nicht alle Bonner Stadtbäume aufgeführt. Wir arbeiten aber daran, die Datenlage zu verbessern und eine möglichst vollständige Darstellung des Bonner Baumbestandes zu erreichen. Die aktuellen Datenquellen sind:
+					answer: `Die Karte zeigt einen Großteil der Bonner Straßen- und Anlagenbäume (65.663; Stand: März 2025). Zusätzlich wird abgebildet, wie viel Niederschlag in den letzten 30 Tagen bei jedem Baum gefallen ist und ob diese in der Zeit bereits gegossen wurden. Aus verschiedenen Gründen sind leider noch nicht alle Bonner Stadtbäume aufgeführt. Wir arbeiten aber daran, die Datenlage zu verbessern und eine möglichst vollständige Darstellung des Bonner Baumbestandes zu erreichen. Die aktuellen Datenquellen sind:
 
-[Geoportal Bonn / Straßenbäume](https://fbinter.stadt-berlin.de/fb/berlin/service_intern.jsp?id=s_wfs_baumbestand@senstadt&type=WFS)
+[Geoportal Bonn / Straßenbäume](https://opendata.bonn.de/dataset/strasenbaume)
 
-[Geoportal Bonn / Anlagenbäume](https://fbinter.stadt-berlin.de/fb/berlin/service_intern.jsp?id=s_wfs_baumbestand_an@senstadt&type=WFS)
+[Geoportal Bonn / Anlagenbäume](https://opendata.bonn.de/dataset/anlagenbaume)
 
 Regendaten von [Deutscher Wetterdienst](https://www.dwd.de/)
 
@@ -551,7 +551,7 @@ Der Bezirk ${district} hat uns zusätzliche Informationen zur individuellen Gie�
 		letsGo: "Los geht's",
 	},
 	loading: {
-		mapLoading: "Wir laden gerade 967.365 Bäume aus dem Bonner Baumbestand.",
+		mapLoading: "Wir laden gerade 65.663 Bäume aus dem Bonner Baumbestand.",
 		treeLoading: "Lade Bauminformationen...",
 	},
 	stats: {
@@ -608,9 +608,9 @@ Aber Achtung! Jungbäume können auch überwässert werden. Mehr Informationen z
 
 Diese Übersicht zeigt die zwanzig häufigsten Arten, jeweils zusammengefasst nach der übergreifenden Gattung.
 
-Die [Gieß den Kiez Karte](https://www.giessdenkiez.de/map) zeigt die volle Pracht, und somit fast 900.000 Stadtbäume, mit Infos zu Art, Alter und Wasserbedarf. Nutze die Filter und Suche, um mehr über die Bäume in Deiner Nachbarschaft zu erfahren.
+Die [Gieß den Kiez Karte](https://www.giessdenkiez.de/map) zeigt die volle Pracht, und somit 65.663 Stadtbäume, mit Infos zu Art, Alter und Wasserbedarf. Nutze die Filter und Suche, um mehr über die Bäume in Deiner Nachbarschaft zu erfahren.
 
-Datenquelle: [Bonner Baumkataster (Geoportal Bonn)](https://daten.berlin.de/datensaetze/baumbestand-berlin-wms )`,
+Datenquelle: [Bonner Baumkataster (Geoportal Bonn)](https://opendata.bonn.de/)`,
 		},
 		adoptionStat: {
 			title: "Baumadoptionen",

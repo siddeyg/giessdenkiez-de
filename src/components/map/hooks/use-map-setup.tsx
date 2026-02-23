@@ -139,6 +139,26 @@ export function useMapSetup(
 					},
 				});
 			});
+			// Hide 3D tree models rendered by the Mapbox Standard style.
+			// These come from OSM/Mapbox data and are visually confusing because
+			// they look like clickable trees but are not GDK features.
+			// GDK tree circles (the "trees" layer) remain unaffected.
+			initializedMap
+				.getStyle()
+				?.layers.filter((layer) => layer.type === "model")
+				.forEach((layer) => {
+					try {
+						initializedMap.setLayoutProperty(
+							layer.id,
+							"visibility",
+							"none",
+						);
+					} catch {
+						// Some Standard style layers may not support the
+						// visibility property; silently ignore those.
+					}
+				});
+
 			setIsMapLoaded(true);
 		});
 
