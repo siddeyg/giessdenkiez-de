@@ -50,7 +50,7 @@ export function useMapTreesInteraction(map: mapboxgl.Map | undefined) {
 		}
 		if (map.isStyleLoaded()) {
 			map.setPaintProperty(
-				"gdk-trees",
+				"trees",
 				"circle-color",
 				filteredCircleColor({
 					isSomeFilterActive: isSomeFilterActive(),
@@ -64,7 +64,7 @@ export function useMapTreesInteraction(map: mapboxgl.Map | undefined) {
 
 		map.once("idle", () => {
 			map.setPaintProperty(
-				"gdk-trees",
+				"trees",
 				"circle-color",
 				filteredCircleColor({
 					isSomeFilterActive: isSomeFilterActive(),
@@ -133,7 +133,7 @@ export function useMapTreesInteraction(map: mapboxgl.Map | undefined) {
 			setLat(map.getCenter().lat);
 			setLng(map.getCenter().lng);
 		});
-		map.on("mousemove", "gdk-trees", (e) => {
+		map.on("mousemove", "trees", (e) => {
 			if (!map || !e.features) {
 				return;
 			}
@@ -154,7 +154,7 @@ export function useMapTreesInteraction(map: mapboxgl.Map | undefined) {
 				return;
 			}
 			const treeFeatures = map.queryRenderedFeatures(e.point, {
-				layers: ["gdk-trees"],
+				layers: ["trees"],
 			});
 			if (!treeFeatures || treeFeatures.length === 0) {
 				return;
@@ -185,7 +185,7 @@ export function useMapTreesInteraction(map: mapboxgl.Map | undefined) {
 			});
 		});
 
-		map.on("mouseleave", "gdk-trees", () => {
+		map.on("mouseleave", "trees", () => {
 			map.getCanvas().style.cursor = "";
 			setHoveredTreeId(undefined);
 		});

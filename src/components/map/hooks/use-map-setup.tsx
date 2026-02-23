@@ -75,7 +75,7 @@ export function useMapSetup(
 			});
 
 			initializedMap.addLayer({
-				id: "gdk-trees",
+				id: "trees",
 				type: "circle",
 				source: "trees",
 				"source-layer": import.meta.env.VITE_MAPBOX_TREES_TILESET_LAYER,
@@ -139,25 +139,25 @@ export function useMapSetup(
 					},
 				});
 			});
-			// Disable 3D tree models from the Mapbox Standard style.
-			// The Standard style's "trees" layer has visibility driven by a config
-			// expression: ["case",["all",["config","show3dTrees"],["config","show3dObjects"]],"visible","none"]
-			// setLayoutProperty cannot override a config expression — the style
-			// re-evaluates it every frame. setConfigProperty sets the underlying
-			// config value the expression reads, which is the only reliable override.
-			// "basemap" is the import ID Mapbox GL JS v3 assigns to the root Standard style.
-			// "building-models" (landmark 3D buildings) remains visible because
-			// show3dBuildings is left untouched.
-			try {
-				// eslint-disable-next-line @typescript-eslint/no-explicit-any
-				(initializedMap as any).setConfigProperty(
-					"basemap",
-					"show3dTrees",
-					false,
-				);
-			} catch {
-				// setConfigProperty not available if a non-Standard style is used; ignore.
-			}
+			// Hide 3D tree models rendered by the Mapbox Standard style.
+			// These come from OSM/Mapbox data and are visually confusing because
+			// they look like clickable trees but are not GDK features.
+			// GDK tree circles (the "trees" layer) remain unaffected.
+			initializedMap
+				.getStyle()
+				?.layers.filter((layer) => layer.type === "model")
+				.forEach((layer) => {
+					try {
+						initializedMap.setLayoutProperty(
+							layer.id,
+							"visibility",
+							"none",
+						);
+					} catch {
+						// Some Standard style layers may not support the
+						// visibility property; silently ignore those.
+					}
+				});
 
 			setIsMapLoaded(true);
 		});
