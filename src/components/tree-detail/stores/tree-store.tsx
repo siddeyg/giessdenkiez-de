@@ -145,3 +145,7 @@ export const useTreeStore = create<TreeStore>()((set, get) => ({
 		set({ todaysWaterings: groupedByTreeId });
 	},
 }));
+
+// Kick off today's waterings fetch immediately — independent of map initialization.
+// The feature-state update in use-map-setup.tsx handles arrival before/after map is ready.
+useTreeStore.getState().loadTodaysWaterings();

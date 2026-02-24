@@ -5,6 +5,22 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Giess den Kiez</title>
 		<script>window._paq = window._paq || [];</script>
+		<!-- Performance: preconnect to external services -->
+		<link rel="preconnect" href="https://api.mapbox.com" />
+		<link rel="preconnect" href="https://events.mapbox.com" />
+		<link rel="preconnect" href="%VITE_SUPABASE_URL%" crossorigin />
+		<link rel="dns-prefetch" href="https://api.mapbox.com" />
+		<link rel="dns-prefetch" href="https://events.mapbox.com" />
+		<!-- Performance: preload pump icons (loaded after Mapbox "load" event otherwise) -->
+		<link rel="preload" href="/images/pump_functioning_selected.png" as="image" />
+		<link rel="preload" href="/images/pump_functioning_unselected.png" as="image" />
+		<link rel="preload" href="/images/pump_not_functioning_selected.png" as="image" />
+		<link rel="preload" href="/images/pump_not_functioning_unselected.png" as="image" />
+		<!-- Performance: preload fonts (discovered at CSS parse time otherwise) -->
+		<link rel="preload" href="/fonts/IBMPlexSans-Bold.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="/fonts/IBMPlexSans-Italic.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="/fonts/IBMPlexSans-Medium.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="/fonts/IBMPlexSans-Regular.woff2" as="font" type="font/woff2" crossorigin />
 	<!-- Matomo
 		<script>
 			var _paq = (window._paq = window._paq || []);
