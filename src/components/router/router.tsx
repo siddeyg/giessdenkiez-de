@@ -15,7 +15,9 @@ import { Splash } from "../splash/splash";
 import { useMapStore } from "../map/map-store";
 import { useSplashStore } from "../splash/splash-store";
 import { Legend } from "../legend/legend";
-import { Stats } from "../stats/stats";
+const Stats = React.lazy(() =>
+	import("../stats/stats").then((m) => ({ default: m.Stats }))
+);
 
 export const Router: React.FC = () => {
 	const url = useUrlState((state) => state.url);
@@ -114,7 +116,9 @@ export const Router: React.FC = () => {
 			return (
 				<div className="flex h-dvh w-screen flex-col-reverse bg-white lg:flex-row">
 					<Navbar />
-					<Stats />
+					<React.Suspense fallback={null}>
+						<Stats />
+					</React.Suspense>
 				</div>
 			);
 		default:

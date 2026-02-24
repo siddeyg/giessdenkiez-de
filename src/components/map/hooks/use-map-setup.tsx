@@ -193,14 +193,7 @@ export function useMapSetup(
 		setMap(initializedMap);
 	}, [mapContainer]);
 
-	const { todaysWaterings, loadTodaysWaterings } = useTreeStore();
-
-	useEffect(() => {
-		const loadData = async () => {
-			await loadTodaysWaterings();
-		};
-		loadData();
-	}, []);
+	const { todaysWaterings } = useTreeStore();
 
 	useEffect(() => {
 		const updateFeatureStates = (waterings: AccumulatedTreeWateringData) => {
