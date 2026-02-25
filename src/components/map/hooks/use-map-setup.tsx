@@ -67,7 +67,17 @@ export function useMapSetup(
 		initializedMap.dragRotate.disable();
 		initializedMap.touchZoomRotate.disableRotation();
 
+		// Dismiss the loading screen after 3 seconds even if the Mapbox "load"
+		// event is delayed (Standard style initialization — shader compilation,
+		// 3D model pipeline, CDN resources — can take 10-15s). The user sees
+		// the base map immediately; the gdk-trees circle layer is added later
+		// when "load" fires.
+		const loadingFallbackTimeout = setTimeout(() => {
+			setIsMapLoaded(true);
+		}, 3000);
+
 		initializedMap.on("load", async () => {
+			clearTimeout(loadingFallbackTimeout);
 			initializedMap.addSource("trees", {
 				type: "vector",
 				url: import.meta.env.VITE_MAPBOX_TREES_TILESET_URL,
@@ -191,6 +201,10 @@ export function useMapSetup(
 		);
 
 		setMap(initializedMap);
+
+		return () => {
+			clearTimeout(loadingFallbackTimeout);
+		};
 	}, [mapContainer]);
 
 	const { todaysWaterings } = useTreeStore();
