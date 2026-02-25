@@ -50,8 +50,10 @@ export function useWaterTree(): WaterTreeState {
 			setWateringLoading(false);
 		}
 		setWateringLoading(false);
-		await refreshUserWaterings();
-		await refreshTreeWateringData(treeId, abortController);
+		await Promise.all([
+			refreshUserWaterings(),
+			refreshTreeWateringData(treeId, abortController),
+		]);
 	};
 
 	const deleteWatering = async (wateringId: number) => {
@@ -79,8 +81,10 @@ export function useWaterTree(): WaterTreeState {
 				return;
 			}
 			setWateringLoading(false);
-			await refreshUserWaterings();
-			await refreshTreeWateringData(treeId, abortController);
+			await Promise.all([
+				refreshUserWaterings(),
+				refreshTreeWateringData(treeId, abortController),
+			]);
 		} catch (error) {
 			handleError(i18n.common.defaultErrorMessage, error);
 			setWateringLoading(false);
