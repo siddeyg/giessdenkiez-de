@@ -94,22 +94,15 @@ export const useTreeAdoptStore = create<TreeAdoptStore>()((set, get) => ({
 
 		try {
 			const { data, error } = await supabaseClient
-				.rpc("get_watered_and_adopted")
-				.order("tree_id", { ascending: true });
+				.rpc("adoption_count_for_tree", { t_id: treeId })
+				.abortSignal(abortController.signal);
 
 			if (error) {
 				handleError(i18n.common.defaultErrorMessage);
 				return;
 			}
 
-			const dataRes = (data ?? []) as {
-				tree_id: string;
-				adopted: number;
-			}[];
-
-			const foundTree = dataRes.find(({ tree_id }) => tree_id === treeId);
-
-			set({ amountOfAdoptions: foundTree?.adopted || 0 });
+			set({ amountOfAdoptions: (data as number) ?? 0 });
 		} catch (error) {
 			if (abortController.signal.aborted) {
 				return;
