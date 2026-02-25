@@ -129,24 +129,31 @@ export function useMapPumpsInteraction(map: mapboxgl.Map | undefined) {
 
 			flying.current = true;
 
-			map.on("move", function () {
+			function onMove() {
 				if (flying.current) {
-					const newPump = mapboxFeatureToPump(map, pumpFeature);
+					const newPump = mapboxFeatureToPump(map!, pumpFeature);
 					setHoveredPump(newPump);
 				}
-			});
+			}
 
-			map.on("flyend", function () {
+			function onFlyEnd() {
 				flying.current = false;
-				const newPump = mapboxFeatureToPump(map, pumpFeature);
+				const newPump = mapboxFeatureToPump(map!, pumpFeature);
 				setSelectedPump(newPump);
-			});
+				map!.off("move", onMove);
+				map!.off("flyend", onFlyEnd);
+				map!.off("moveend", onMoveEnd);
+			}
 
-			map.on("moveend", function () {
+			function onMoveEnd() {
 				if (flying.current) {
-					map.fire("flyend");
+					map!.fire("flyend");
 				}
-			});
+			}
+
+			map.on("move", onMove);
+			map.on("flyend", onFlyEnd);
+			map.on("moveend", onMoveEnd);
 		});
 
 		map.on("dragstart", function () {
