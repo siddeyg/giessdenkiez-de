@@ -48,13 +48,17 @@ interface ProfileStore {
 
 export const useProfileStore = create<ProfileStore>()((set, get) => ({
 	refresh: async () => {
-		const promises = [
+		// Phase 1: fetch independent data in parallel.
+		// refreshAdoptedTrees and refreshUserWaterings must both complete
+		// before refreshAdoptedTreesInfo runs, because it reads adoptedTrees
+		// from state and uses getUserWateringsOfTree (which reads userWaterings).
+		await Promise.all([
 			get().refreshUsername(),
-			get().refreshAdoptedTreesInfo(),
+			get().refreshAdoptedTrees(),
 			get().refreshUserWaterings(),
-		];
-
-		await Promise.all(promises);
+		]);
+		// Phase 2: build adoptedTreesInfo now that both dependencies are in state.
+		await get().refreshAdoptedTreesInfo();
 	},
 
 	username: null,
@@ -120,7 +124,15 @@ export const useProfileStore = create<ProfileStore>()((set, get) => ({
 	refreshAdoptedTreesInfo: async () => {
 		set({ adoptedTreesInfo: null });
 
-		await get().refreshAdoptedTrees();
+		if (!useAuthStore.getState().isLoggedIn()) {
+			return;
+		}
+
+		const adoptedTrees = get().adoptedTrees;
+		if (adoptedTrees.length === 0) {
+			set({ adoptedTreesInfo: [] });
+			return;
+		}
 
 		const { data, error } = await supabaseClient
 			.from("trees")
@@ -131,7 +143,7 @@ export const useProfileStore = create<ProfileStore>()((set, get) => ({
 					trees_watered ( id, amount)
 					`,
 			)
-			.in("id", get().adoptedTrees ?? []);
+			.in("id", adoptedTrees);
 
 		if (error) {
 			throw error;
@@ -197,13 +209,6 @@ export const useProfileStore = create<ProfileStore>()((set, get) => ({
 		}
 
 		set({ userWaterings: data });
-
-		/**
-		 * we also need to refresh the adoptedTreeInfo as they base
-		 * the calculated total watering volume and watering count
-		 * on the userWaterings.
-		 */
-		await get().refreshAdoptedTreesInfo();
 	},
 
 	updatePassword: async (password: string) => {
