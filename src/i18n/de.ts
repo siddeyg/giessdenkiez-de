@@ -212,7 +212,7 @@ Die Straßen- und Grünflächenämter gießen regelmäßig mehrere tausend Bäum
 				{
 					question: "Wie gieße ich richtig?",
 					answer: `
-Je nach Alter, Standort und Baumart benötigen Bäume unterschiedlich viel Wasser. Insbesondere Jungbäume (0-10 Jahre) sind in Zeiten von Trockenheit, Strahlung und Hitze auf eine regelmäßige Wässerung angewiesen. Die bezirklichen Grünflächenämter in Bonn versorgen Jungbäume in der Regel bis zu einem Alter von 5 Jahren, wodurch besondern Junbäume im Alter zwischen 5 und 10 Jahren unsere Aufmerksamkeit benötigen.
+Je nach Alter, Standort und Baumart benötigen Bäume unterschiedlich viel Wasser. Insbesondere Jungbäume (0-10 Jahre) sind in Zeiten von Trockenheit, Strahlung und Hitze auf eine regelmäßige Wässerung angewiesen. Das Amt für Umwelt und Stadtgrün der Bundesstadt Bonn versorgt Jungbäume in der Regel bis zu einem Alter von 8 Jahren (die ersten 4 Jahre durch beauftragte Unternehmen, danach durch die Stadt), wodurch besonders Jungbäume zwischen 8 und 10 Jahren unsere Aufmerksamkeit benötigen.
 
 Vor jeder Gießung solltet ihr euch den Baum zunächst anschauen und überlegen ob der Baum wirklich Wasser benötigt. Wichtige Indikatoren für bedarfsgerechtes gießen sind bspw. das Alter (jung/alt), der Stammunfang (dünn/dick), der Standort (sonnig/schattig) oder die Beschaffenheit frischer Triebe (kahl/grün) eines Baumes. Bevor ihr mit dem gießen loslegt, empfehlen wir den ausgetrockneten Boden vor dem Gießen aufzulockern, sodass das Wasser in den Boden eindringen kann und nicht oberirdisch abläuft oder sich falsch anstaut. Angelehnt an das Bonner [Handbuch Gute Pflege](https://www.berlin.de/sen/uvk/natur-und-gruen/stadtgruen/pflegen-und-unterhalten/handbuch-gute-pflege), solltet ihr lieber selten, dafür mit größeren Menge an Wasser zu gießen. Das Handbuch empfiehlt für frisch gepflanzte Bäume bis zu 200l pro Gießung. So sorgt ihr dafür, dass die Bodenfeuchte auch in der Tiefe erhöht wird.
 Auch zu empfehlen sind sogenannte Gießsäcke aus denen das Wasser nur sehr langsam austritt, kaum oberflächlich abläuft und somit kontinuierlich in den Boden sickert.
@@ -329,9 +329,9 @@ gießen`,
 			ageAndWaterHint: `
 Insbesondere junge Bäume brauchen in den ersten Jahren Wasser. Lieber seltener, aber dafür viel.
 
-**Unter 5 Jahren**: Wir sind frische Jungbäume und unser Durst wird vom bezirklichen Grünflächenamt gestillt.
+**Unter 8 Jahren**: Wir sind frische Jungbäume und unser Durst wird vom Amt für Umwelt und Stadtgrün der Bundesstadt Bonn gestillt (die ersten 4 Jahre durch beauftragte Unternehmen, danach durch die Stadt).
 
-**5-10 Jahre**: In dem Alter werden wir nicht mehr in allen Bezirken von der Verwaltung bewässert und sind noch keine „Selbstversorger“. Wir freuen uns gerade in trockenen Zeiten über Wasser - lieber seltener, aber viel auf einmal (ca. 100-200l pro Monat).
+**8-10 Jahre**: In dem Alter werden wir nicht mehr von der Verwaltung bewässert und sind noch keine „Selbstversorger”. Wir freuen uns gerade in trockenen Zeiten über Wasser – lieber seltener, aber viel auf einmal (ca. 100 Liter pro Wässerung, das sind etwa 7–10 Gießkannen).
 
 **Ältere Bäume (10+ Jahre)**: Wir können uns über das Grundwasser selbst versorgen.
 `,

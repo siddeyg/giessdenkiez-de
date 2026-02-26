@@ -209,7 +209,7 @@ The street and green space authorities are already watering thousands of trees, 
 				{
 					question: "How do I water correctly?",
 					answer: `
-Trees require different amounts of water depending on their age, location and species. Young trees (0-10 years) in particular are dependent on frequent waterings in times of drought, radiation and heat. The district green space offices in Bonn typically take care of young trees up to the age of 5 years, which means that young trees between 5 and 10 years old require your attention.
+Trees require different amounts of water depending on their age, location and species. Young trees (0-10 years) in particular are dependent on frequent waterings in times of drought, radiation and heat. Bonn's Amt für Umwelt und Stadtgrün typically takes care of young trees up to the age of 8 years (the first 4 years by contracted companies, then by the city itself), which means that young trees between 8 and 10 years old require your attention.
 
 Before watering, you should first look at the tree and consider whether it really needs water. Important indicators for need-based watering include the age (young/old), trunk circumference (thin/thick), location (sunny/shady), and the condition of fresh shoots (bare/green) of a tree. Before you start watering, we recommend loosening the dry soil so that the water can penetrate the ground instead of running off or pooling on the surface. Based on Bonn's [Good Care Manual](https://www.berlin.de/sen/uvk/natur-und-gruen/stadtgruen/pflegen-und-unterhalten/handbuch-gute-pflege), it is better to water less frequently but with larger amounts of water. The manual recommends up to 200 liters per watering for newly planted trees. This ensures that the soil moisture is also increased at depth. So-called watering bags are also recommended, from which the water only emerges very slowly, hardly runs off the surface and therefore seeps continuously into the soil.
 					`,
@@ -318,11 +318,11 @@ Needs
 			readMore: "Show more",
 			ageAndWaterHintTitle: "Water requirements and age",
 			ageAndWaterHint: `
-Particularly young trees need water in the first few years. Rather less often, but a lot at once. 
+Particularly young trees need water in the first few years. Rather less often, but a lot at once.
 
-**Below 5 years**: We are taken care of by the district green space office.
+**Below 8 years**: We are taken care of by Bonn's Amt für Umwelt und Stadtgrün (first 4 years by contracted companies, then by the city).
 
-**5-10 years**: At this age, we are no longer watered by the administration in all districts and are not yet "self-sufficient". We are thankful for some extra water, especially in dry times - preferably less often, but a lot at once (approx. 100-200 liters per month). 
+**8-10 years**: At this age, we are no longer watered by the administration and are not yet "self-sufficient". We are thankful for some extra water, especially in dry times - preferably less often, but a lot at once (approx. 100 liters per watering, about 7-10 watering cans).
 
 **Older trees (10+ years)**: We can supply ourselves via the groundwater.`,
 			ageAndWaterHintWinter: `
