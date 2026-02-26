@@ -53,9 +53,17 @@ export function useMapSetup(
 
 		const testMode = import.meta.env.VITE_PW_TEST === "true";
 
+		// Allow `?mapstyle=streets` query param to switch to streets-v12 for
+		// performance comparison (Standard style vs lightweight streets style).
+		const styleOverride = new URLSearchParams(window.location.search).get("mapstyle");
+		const mapStyle =
+			styleOverride === "streets"
+				? "mapbox://styles/mapbox/streets-v12"
+				: import.meta.env.VITE_MAPBOX_STYLE_URL;
+
 		const initializedMap = new mapboxgl.Map({
 			container: mapContainer.current,
-			style: import.meta.env.VITE_MAPBOX_STYLE_URL,
+			style: mapStyle,
 			center: [MAP_CENTER_LNG, MAP_CENTER_LAT],
 			zoom: MAP_INITIAL_ZOOM_LEVEL,
 			minZoom: MAP_MIN_ZOOM_LEVEL,
