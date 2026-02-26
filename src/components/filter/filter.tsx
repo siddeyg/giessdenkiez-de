@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { useI18nStore } from "../../i18n/i18n-store";
 import { PrimaryButton } from "../buttons/primary";
 import { useFilterStore } from "./filter-store";
@@ -20,9 +20,17 @@ export const Filter: React.FC = () => {
 		setAreLastWateredTreesVisible,
 	} = useFilterStore();
 
-	const onToggleAllAdoptedTrees = () => {
+	const onTogglePumps = useCallback(() => {
+		setShowPumps(!isPumpsVisible);
+	}, [setShowPumps, isPumpsVisible]);
+
+	const onToggleLastWateredTrees = useCallback(() => {
+		setAreLastWateredTreesVisible(!areLastWateredTreesVisible);
+	}, [setAreLastWateredTreesVisible, areLastWateredTreesVisible]);
+
+	const onToggleAllAdoptedTrees = useCallback(() => {
 		setAreOnlyAllAdoptedTreesVisible(!areOnlyAllAdoptedTreesVisible);
-	};
+	}, [setAreOnlyAllAdoptedTreesVisible, areOnlyAllAdoptedTreesVisible]);
 
 	return (
 		<div className="flex flex-row w-full justify-center pointer-events-auto">
@@ -34,16 +42,12 @@ export const Filter: React.FC = () => {
 					<div className="flex flex-col gap-2 relative">
 						<FilterSwitch
 							name={i18n.filter.publicPumps}
-							onToggle={() => {
-								setShowPumps(!isPumpsVisible);
-							}}
+							onToggle={onTogglePumps}
 							isEnabled={isPumpsVisible}
 						/>
 						<FilterSwitch
 							name={i18n.filter.lastWateredTrees}
-							onToggle={() => {
-								setAreLastWateredTreesVisible(!areLastWateredTreesVisible);
-							}}
+							onToggle={onToggleLastWateredTrees}
 							isEnabled={areLastWateredTreesVisible}
 						/>
 

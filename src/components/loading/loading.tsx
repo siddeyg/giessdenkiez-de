@@ -8,10 +8,10 @@ export interface LoadingProps {
 	isImprintPrivacyVisible?: boolean;
 }
 
-export const Loading: React.FC<LoadingProps> = ({
+export const Loading: React.FC<LoadingProps> = React.memo(function Loading({
 	loadingText,
 	isImprintPrivacyVisible = false,
-}) => {
+}) {
 	const i18n = useI18nStore().i18n();
 	return (
 		<div className="h-full w-full flex flex-col justify-center bg-gdk-white items-center gap-3 pointer-events-auto">
@@ -44,4 +44,4 @@ export const Loading: React.FC<LoadingProps> = ({
 			)}
 		</div>
 	);
-};
+});

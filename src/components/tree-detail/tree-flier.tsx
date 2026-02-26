@@ -7,7 +7,9 @@ interface TreeFlierProps {
 	info: string;
 }
 
-export const TreeFlier: React.FC<TreeFlierProps> = ({ info }) => {
+export const TreeFlier: React.FC<TreeFlierProps> = React.memo(function TreeFlier({
+	info,
+}) {
 	const [isExpanded, setIsExpanded] = useState(false);
 	const i18n = useI18nStore().i18n();
 
@@ -30,4 +32,4 @@ export const TreeFlier: React.FC<TreeFlierProps> = ({ info }) => {
 			{isExpanded && <div>{info}</div>}
 		</div>
 	);
-};
+});
