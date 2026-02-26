@@ -44,20 +44,20 @@ export function useMapPumpsInteraction(map: mapboxgl.Map | undefined) {
 				"visibility",
 				isPumpsVisible ? "visible" : "none",
 			);
+		} else {
+			map.once("idle", () => {
+				map.setLayoutProperty(
+					"pumps",
+					"visibility",
+					isPumpsVisible ? "visible" : "none",
+				);
+				map.setLayoutProperty(
+					"pumps-highlight",
+					"visibility",
+					isPumpsVisible ? "visible" : "none",
+				);
+			});
 		}
-
-		map.once("idle", () => {
-			map.setLayoutProperty(
-				"pumps",
-				"visibility",
-				isPumpsVisible ? "visible" : "none",
-			);
-			map.setLayoutProperty(
-				"pumps-highlight",
-				"visibility",
-				isPumpsVisible ? "visible" : "none",
-			);
-		});
 
 		if (!isPumpsVisible) {
 			setHoveredPump(undefined);

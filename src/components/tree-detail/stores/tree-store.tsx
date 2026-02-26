@@ -67,7 +67,9 @@ export const useTreeStore = create<TreeStore>()((set, get) => ({
 
 		const { data, error } = await supabaseClient
 			.from("trees")
-			.select("*")
+			.select(
+				"id, art_bot, art_dtsch, baumhoehe, bezirk, caretaker, eigentuemer, gattung, gattung_deutsch, lat, lng, pflanzjahr, radolan_days, radolan_sum, standalter, geom",
+			)
 			.eq("id", treeId)
 			.abortSignal(abortController.signal);
 
