@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { useUrlState } from "../router/store";
 import { MapIcon } from "../icons/map-icon";
 import { UserIcon } from "../icons/user-icon";
@@ -7,22 +7,25 @@ import { useI18nStore } from "../../i18n/i18n-store";
 import { LanguageToggle } from "../router/languageToggle";
 import { BarChartIcon } from "../icons/bar-chart-icon";
 
-export const Navbar: React.FC = () => {
+export const Navbar: React.FC = React.memo(function Navbar() {
 	const i18n = useI18nStore().i18n();
 
 	const setPathname = useUrlState((state) => state.setPathname);
 	const url = useUrlState((state) => state.url);
 
-	const navItems = [
-		{ label: i18n.navbar.map, path: "/map", icon: <MapIcon /> },
-		{ label: "Stats", path: "/stats", icon: <BarChartIcon /> },
-		{
-			label: i18n.navbar.profile.sidebarLabel,
-			path: "/profile",
-			icon: <UserIcon />,
-		},
-		{ label: i18n.navbar.info, path: "/about", icon: <InfoIcon /> },
-	];
+	const navItems = useMemo(
+		() => [
+			{ label: i18n.navbar.map, path: "/map", icon: <MapIcon /> },
+			{ label: "Stats", path: "/stats", icon: <BarChartIcon /> },
+			{
+				label: i18n.navbar.profile.sidebarLabel,
+				path: "/profile",
+				icon: <UserIcon />,
+			},
+			{ label: i18n.navbar.info, path: "/about", icon: <InfoIcon /> },
+		],
+		[i18n],
+	);
 
 	return (
 		<nav
@@ -64,4 +67,4 @@ export const Navbar: React.FC = () => {
 			</div>
 		</nav>
 	);
-};
+});

@@ -28,7 +28,8 @@ function getDisplayedUsername(wateringData: TreeWateringData) {
 	return <div>{wateringData.username}</div>;
 }
 
-export const WateringCard: React.FC<WateringCardProps> = ({ wateringData }) => {
+export const WateringCard: React.FC<WateringCardProps> = React.memo(
+	function WateringCard({ wateringData }) {
 	const formatDate = useI18nStore().formatDate;
 	const { username } = useProfileStore();
 	const { deleteWatering } = useWaterTree();
@@ -190,4 +191,5 @@ export const WateringCard: React.FC<WateringCardProps> = ({ wateringData }) => {
 			)}
 		</div>
 	);
-};
+},
+);

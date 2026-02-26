@@ -5,7 +5,7 @@ import { useTreeStore } from "../tree-detail/stores/tree-store";
 import { useFilterStore } from "../filter/filter-store";
 import { useMapStore } from "../map/map-store";
 
-export const Legend: React.FC = () => {
+export const Legend: React.FC = React.memo(function Legend() {
 	const { isSplashScreenVisible } = useSplashStore();
 	const { selectedTreeId } = useTreeStore();
 	const { isFilterViewVisible } = useFilterStore();
@@ -27,4 +27,4 @@ export const Legend: React.FC = () => {
 			<LegendButton />
 		</div>
 	);
-};
+});

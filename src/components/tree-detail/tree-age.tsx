@@ -6,7 +6,9 @@ interface TreeAgeProps {
 	treeAge: number | undefined;
 }
 
-export const TreeAge: React.FC<TreeAgeProps> = ({ treeAge }) => {
+export const TreeAge: React.FC<TreeAgeProps> = React.memo(function TreeAge({
+	treeAge,
+}) {
 	const i18n = useI18nStore().i18n();
 	return (
 		<div className="flex flex-row items-center justify-between border-b-2 py-8 text-xl font-bold">
@@ -24,4 +26,4 @@ export const TreeAge: React.FC<TreeAgeProps> = ({ treeAge }) => {
 			)}
 		</div>
 	);
-};
+});
