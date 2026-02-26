@@ -3,10 +3,8 @@ import * as mapboxgl from "mapbox-gl";
 import { Pump, usePumpStore } from "./use-pump-store";
 
 export function useSelectedPump(map: mapboxgl.Map | undefined) {
-	const [selectedPump, setSelectedPump] = usePumpStore((store) => [
-		store.selectedPump,
-		store.setSelectedPump,
-	]);
+	const selectedPump = usePumpStore((store) => store.selectedPump);
+	const setSelectedPump = usePumpStore((store) => store.setSelectedPump);
 
 	const selectedPumpRef = useRef<Pump | undefined>(undefined);
 

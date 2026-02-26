@@ -17,10 +17,8 @@ import { TreeIcon } from "../icons/tree-icon";
 export const TreeDetail: React.FC = () => {
 	const i18n = useI18nStore().i18n();
 
-	const [url, removeSearchParam] = useUrlState((state) => [
-		state.url,
-		state.removeSearchParam,
-	]);
+	const url = useUrlState((state) => state.url);
+	const removeSearchParam = useUrlState((state) => state.removeSearchParam);
 	const { selectedTreeId, setSelectedTreeId, setHoveredTreeId } =
 		useTreeStore();
 

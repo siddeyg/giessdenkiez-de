@@ -3,10 +3,8 @@ import * as mapboxgl from "mapbox-gl";
 import { Pump, usePumpStore } from "./use-pump-store";
 
 export function useHoveredPump(map: mapboxgl.Map | undefined) {
-	const [hoveredPump, setHoveredPump] = usePumpStore((store) => [
-		store.hoveredPump,
-		store.setHoveredPump,
-	]);
+	const hoveredPump = usePumpStore((store) => store.hoveredPump);
+	const setHoveredPump = usePumpStore((store) => store.setHoveredPump);
 
 	const hoveredPumpRef = useRef<Pump | undefined>(undefined);
 

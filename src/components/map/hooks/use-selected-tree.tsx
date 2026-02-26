@@ -4,15 +4,11 @@ import { useTreeStore } from "../../tree-detail/stores/tree-store";
 import { useUrlState } from "../../router/store";
 
 export function useSelectedTree(map: mapboxgl.Map | undefined) {
-	const [addSearchParam, removeSearchParam] = useUrlState((state) => [
-		state.addSearchParam,
-		state.removeSearchParam,
-	]);
+	const addSearchParam = useUrlState((state) => state.addSearchParam);
+	const removeSearchParam = useUrlState((state) => state.removeSearchParam);
 
-	const [selectedTreeId, setSelectedTreeId] = useTreeStore((store) => [
-		store.selectedTreeId,
-		store.setSelectedTreeId,
-	]);
+	const selectedTreeId = useTreeStore((store) => store.selectedTreeId);
+	const setSelectedTreeId = useTreeStore((store) => store.setSelectedTreeId);
 
 	const selectedTreeIdRef = useRef<string | undefined>(undefined);
 

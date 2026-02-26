@@ -3,10 +3,8 @@ import * as mapboxgl from "mapbox-gl";
 import { useTreeStore } from "../../tree-detail/stores/tree-store";
 
 export function useHoveredTree(map: mapboxgl.Map | undefined) {
-	const [hoveredTreeId, setHoveredTreeId] = useTreeStore((store) => [
-		store.hoveredTreeId,
-		store.setHoveredTreeId,
-	]);
+	const hoveredTreeId = useTreeStore((store) => store.hoveredTreeId);
+	const setHoveredTreeId = useTreeStore((store) => store.setHoveredTreeId);
 
 	const hoveredTreeIdRef = useRef<string | undefined>(undefined);
 	useEffect(() => {
