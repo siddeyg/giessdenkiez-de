@@ -150,8 +150,18 @@ export const useStatsStore = create<StatsStore>()((set, get) => {
 		onResize: () => {
 			const container = document.getElementById("stats-card-container");
 			if (!container) {
-				// if the container is not added to the dom yet, retry in 50
-				setTimeout(() => get().onResize(), 50);
+				// Container not in DOM yet — retry with a cap of 20 attempts (1s max).
+				// Avoids unbounded recursive polling if the element never appears.
+				let retries = 0;
+				const attempt = () => {
+					const el = document.getElementById("stats-card-container");
+					if (el) {
+						set({ chartWidth: el.offsetWidth });
+					} else if (retries++ < 20) {
+						setTimeout(attempt, 50);
+					}
+				};
+				setTimeout(attempt, 50);
 				return;
 			}
 
