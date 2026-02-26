@@ -211,17 +211,21 @@ export function useMapSetup(
 
 	useEffect(() => {
 		const updateFeatureStates = (waterings: AccumulatedTreeWateringData) => {
-			for (const treeId in waterings) {
-				const amount = todaysWaterings[treeId];
-				map?.setFeatureState(
-					{
-						id: treeId,
-						source: "trees",
-						sourceLayer: "trees",
-					},
-					{ todays_waterings: amount },
-				);
-			}
+			// Defer all setFeatureState calls to the next animation frame so the
+			// full loop lands in a single Mapbox render cycle instead of
+			// potentially triggering incremental redraws.
+			requestAnimationFrame(() => {
+				for (const treeId in waterings) {
+					map?.setFeatureState(
+						{
+							id: treeId,
+							source: "trees",
+							sourceLayer: "trees",
+						},
+						{ todays_waterings: waterings[treeId] },
+					);
+				}
+			});
 		};
 
 		if (map && Object.keys(todaysWaterings).length > 0) {
