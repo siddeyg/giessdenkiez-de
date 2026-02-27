@@ -8,7 +8,6 @@ import { Navbar } from "../navbar/navbar";
 import { PageNotFound } from "../page-not-found/page-not-found";
 import { Profile } from "../profile/profile";
 import { PasswordReset } from "../profile/profile-logged-in/password-reset";
-import { TreeDetail } from "../tree-detail/tree-detail";
 import { useLocationEventListener } from "./hooks/use-location-event-listener";
 import { useUrlState } from "./store";
 import { Splash } from "../splash/splash";
@@ -17,6 +16,9 @@ import { useSplashStore } from "../splash/splash-store";
 import { Legend } from "../legend/legend";
 const Stats = React.lazy(() =>
 	import("../stats/stats").then((m) => ({ default: m.Stats }))
+);
+const TreeDetail = React.lazy(() =>
+	import("../tree-detail/tree-detail").then((m) => ({ default: m.TreeDetail }))
 );
 
 export const Router: React.FC = () => {
@@ -87,7 +89,11 @@ export const Router: React.FC = () => {
 						</div>
 					)}
 					<Legend />
-					{treeId && isMapLoaded && <TreeDetail />}
+					{treeId && isMapLoaded && (
+					<React.Suspense fallback={null}>
+						<TreeDetail />
+					</React.Suspense>
+				)}
 					{isSplashScreenVisible() && <Splash />}
 				</div>
 			);
