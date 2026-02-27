@@ -2,7 +2,6 @@
 import React, { useEffect } from "react";
 import { Filter } from "../filter/filter";
 import { useFilterStore } from "../filter/filter-store";
-import { Info } from "../info/info";
 import { LocationSearch } from "../location-search/location-search";
 import { Navbar } from "../navbar/navbar";
 import { PageNotFound } from "../page-not-found/page-not-found";
@@ -14,6 +13,9 @@ import { Splash } from "../splash/splash";
 import { useMapStore } from "../map/map-store";
 import { useSplashStore } from "../splash/splash-store";
 import { Legend } from "../legend/legend";
+const Info = React.lazy(() =>
+	import("../info/info").then((m) => ({ default: m.Info }))
+);
 const Stats = React.lazy(() =>
 	import("../stats/stats").then((m) => ({ default: m.Stats }))
 );
@@ -115,7 +117,9 @@ export const Router: React.FC = () => {
 			return (
 				<div className="flex h-dvh w-screen flex-col-reverse bg-white lg:flex-row">
 					<Navbar />
-					<Info />
+					<React.Suspense fallback={null}>
+						<Info />
+					</React.Suspense>
 				</div>
 			);
 		case "/stats":

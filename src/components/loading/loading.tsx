@@ -1,7 +1,6 @@
 import React from "react";
 import { SplashTreeIcon } from "../icons/splash-tree-icon";
 import { useI18nStore } from "../../i18n/i18n-store";
-import Markdown from "react-markdown";
 
 export interface LoadingProps {
 	loadingText: string;
@@ -28,7 +27,7 @@ export const Loading: React.FC<LoadingProps> = React.memo(function Loading({
 						className="underline hover:text-gdk-lighter-gray"
 						rel="noopener noreferrer"
 					>
-						<Markdown>{i18n.map.attribution.imprint.label}</Markdown>
+						{i18n.map.attribution.imprint.label}
 					</a>
 					—
 					<a
@@ -38,7 +37,7 @@ export const Loading: React.FC<LoadingProps> = React.memo(function Loading({
 						className="underline hover:text-gdk-lighter-gray"
 						rel="noopener noreferrer"
 					>
-						<Markdown>{i18n.map.attribution.privacy.label}</Markdown>
+						{i18n.map.attribution.privacy.label}
 					</a>
 				</div>
 			)}
