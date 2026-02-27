@@ -8,11 +8,26 @@ import { TreeSplashIcon } from "../icons/tree-splash-icon";
 import { HiThereIcon } from "../icons/hi-there-icon";
 import { LanguageToggle } from "../router/languageToggle";
 import { useI18nStore } from "../../i18n/i18n-store";
-import Markdown from "react-markdown";
 import { SplashTreeIcon } from "../icons/splash-tree-icon";
 import { ExternalAnchorLink } from "../anchor-link/external-anchor-link";
 import { useSplashStore } from "./splash-store";
 import { useIsInVegetationPeriod } from "../../utils/use-is-in-vegetation-period";
+
+/** Renders a string that may contain **bold** spans and newlines as JSX. */
+function renderSimpleMarkdown(text: string): React.ReactNode {
+	return text.split("\n").map((line, lineIdx) => {
+		const parts = line.split(/\*\*(.*?)\*\*/g);
+		const nodes = parts.map((part, i) =>
+			i % 2 === 1 ? <strong key={i}>{part}</strong> : part,
+		);
+		return (
+			<React.Fragment key={lineIdx}>
+				{lineIdx > 0 && <br />}
+				{nodes}
+			</React.Fragment>
+		);
+	});
+}
 
 interface SectionHeadingProps {
 	title: string;
@@ -114,14 +129,16 @@ export const Splash: React.FC = () => {
 				</div>
 				<div className="flex flex-col lg:flex-row w-full justify-between items-top pb-8">
 					<div className="flex flex-col gap-2 pr-6 w-full lg:max-w-[70%]">
-						<Markdown className="sm:text-xl xl:text-2xl 2xl:text-3xl font-semibold">
+						<p className="sm:text-xl xl:text-2xl 2xl:text-3xl font-semibold">
 							{i18n.splash.headline}
-						</Markdown>
-						<Markdown className="text-sm xl:text-base">
-							{isInVegetationPeriod
-								? i18n.splash.subheadline
-								: i18n.splash.subheadlineWinter}
-						</Markdown>
+						</p>
+						<p className="text-sm xl:text-base">
+							{renderSimpleMarkdown(
+								isInVegetationPeriod
+									? i18n.splash.subheadline
+									: i18n.splash.subheadlineWinter,
+							)}
+						</p>
 						<div>
 							<PrimaryButton
 								label={

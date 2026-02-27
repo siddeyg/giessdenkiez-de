@@ -1,6 +1,14 @@
 import React from "react";
 import { useI18nStore } from "../../i18n/i18n-store.ts";
-import Markdown from "react-markdown";
+
+/** Renders a label that may be wrapped in **bold** markers as a <strong> element. */
+function renderLabel(label: string): React.ReactNode {
+	const boldMatch = label.match(/^\*\*(.*)\*\*$/);
+	if (boldMatch) {
+		return <strong>{boldMatch[1]}</strong>;
+	}
+	return label;
+}
 
 export const MapAttribution: React.FC = () => {
 	const i18n = useI18nStore().i18n();
@@ -25,7 +33,7 @@ export const MapAttribution: React.FC = () => {
 						rel="noopener noreferrer"
 						className=" text-gray-600 hover:text-gdk-light-gray underline"
 					>
-						<Markdown className={"block"}>{link.label}</Markdown>
+						{renderLabel(link.label)}
 					</a>
 				))
 				.reduce((prev, curr) => [prev, " - ", curr])}

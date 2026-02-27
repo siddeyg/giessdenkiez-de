@@ -1,9 +1,16 @@
 import React, { useCallback } from "react";
-import Markdown from "react-markdown";
 import { PrimaryButton } from "../buttons/primary.tsx";
 import { InfoIcon } from "../icons/info-icon.tsx";
 import { useUrlState } from "../router/store.tsx";
 import { CloseIcon } from "../icons/close-icon";
+
+/** Renders a string that may contain *italic* spans as JSX. */
+function renderSimpleMarkdown(text: string): React.ReactNode {
+	const parts = text.split(/\*(.*?)\*/g);
+	return parts.map((part, i) =>
+		i % 2 === 1 ? <em key={i}>{part}</em> : part,
+	);
+}
 
 export interface WarningDialogProps {
 	title: string;
@@ -52,7 +59,7 @@ export const WarningDialog: React.FC<WarningDialogProps> = ({
 						<InfoIcon></InfoIcon>
 					</div>
 
-					<Markdown className="font-semibold text-xl ">{title}</Markdown>
+					<span className="font-semibold text-xl ">{renderSimpleMarkdown(title)}</span>
 				</div>
 
 				<p className="">{alertMessage}</p>
