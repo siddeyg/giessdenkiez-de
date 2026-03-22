@@ -388,4 +388,16 @@ export interface Content {
 	splash: Splash;
 	loading: Loading;
 	stats: Stats;
+	findThirstyTree: {
+		buttonLabel: string;
+		drawerTitle: string;
+		locating: string;
+		searching: string;
+		noResults: string;
+		error: string;
+		ageBaby: string;
+		ageJunior: string;
+		rainAmount: (mm: string) => string;
+		lastWatered: (date: string) => string;
+	};
 }

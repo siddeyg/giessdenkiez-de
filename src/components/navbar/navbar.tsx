@@ -6,6 +6,7 @@ import { InfoIcon } from "../icons/info-icon";
 import { useI18nStore } from "../../i18n/i18n-store";
 import { LanguageToggle } from "../router/languageToggle";
 import { BarChartIcon } from "../icons/bar-chart-icon";
+import { FindThirstyTreeButton } from "../find-thirsty-tree/find-thirsty-tree-button";
 
 export const Navbar: React.FC = React.memo(function Navbar() {
 	const i18n = useI18nStore().i18n();
@@ -60,6 +61,7 @@ export const Navbar: React.FC = React.memo(function Navbar() {
 						{item.label}
 					</a>
 				))}
+				<FindThirstyTreeButton />
 			</div>
 
 			<div className="hidden lg:flex justify-center pb-10">

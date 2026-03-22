@@ -612,4 +612,16 @@ Young trees (under 10 years old) are particularly thirsty. These are usually wat
 
 [Find out more!](https://deinestadt.giessdenkiez.de/)`,
 	},
+	findThirstyTree: {
+		buttonLabel: "Thirsty",
+		drawerTitle: "Thirsty trees nearby",
+		locating: "Getting your location…",
+		searching: "Looking for thirsty trees…",
+		noResults: "No thirsty trees within 550m — great job!",
+		error: "Could not get your location.",
+		ageBaby: "Young tree",
+		ageJunior: "Especially thirsty",
+		rainAmount: (mm: string) => `${mm} mm rain`,
+		lastWatered: (date: string) => `watered ${date}`,
+	},
 };

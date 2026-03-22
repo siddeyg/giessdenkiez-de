@@ -625,4 +625,16 @@ Durstig sind vor allem Jungbäume (unter 10 Jahren). Diese werden in der Regel m
 
 [Erfahre mehr!](https://deinestadt.giessdenkiez.de/)`,
 	},
+	findThirstyTree: {
+		buttonLabel: "Durstig",
+		drawerTitle: "Durstige Bäume in der Nähe",
+		locating: "Standort wird ermittelt…",
+		searching: "Durstige Bäume werden gesucht…",
+		noResults: "Keine durstigen Bäume in 550m gefunden — super!",
+		error: "Standort konnte nicht ermittelt werden.",
+		ageBaby: "Jungbaum",
+		ageJunior: "Besonders durstig",
+		rainAmount: (mm: string) => `${mm} mm Regen`,
+		lastWatered: (date: string) => `gegossen am ${date}`,
+	},
 };
