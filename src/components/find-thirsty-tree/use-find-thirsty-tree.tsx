@@ -45,8 +45,8 @@ export function useFindThirstyTree(): FindThirstyTreeState {
 
 				const { data, error } = await supabaseClient
 					.rpc("get_trees_needing_water", {
-						p_lat: latitude,
-						p_lng: longitude,
+						lat: latitude,
+						lng: longitude,
 						radius_m: 550,
 						max_results: 5,
 					})
