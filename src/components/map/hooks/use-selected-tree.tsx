@@ -12,31 +12,32 @@ export function useSelectedTree(map: mapboxgl.Map | undefined) {
 
 	const selectedTreeIdRef = useRef<string | undefined>(undefined);
 
+	const applyFeatureState = (
+		map: mapboxgl.Map,
+		id: string,
+		isSelected: boolean,
+	) => {
+		if (!map.getSource("trees")) return;
+		map.setFeatureState(
+			{ id, source: "trees", sourceLayer: "trees" },
+			{ select: isSelected },
+		);
+	};
+
 	const setSelectState = (id: string, isSelected: boolean) => {
 		if (!map) {
 			return;
 		}
 
-		if (map.isStyleLoaded()) {
-			map.setFeatureState(
-				{
-					id: id,
-					source: "trees",
-					sourceLayer: "trees",
-				},
-				{ select: isSelected },
-			);
+		if (map.getSource("trees")) {
+			applyFeatureState(map, id, isSelected);
 		} else {
-			map.on("styledata", () => {
-				map.setFeatureState(
-					{
-						id: id,
-						source: "trees",
-						sourceLayer: "trees",
-					},
-					{ select: isSelected },
-				);
-			});
+			const handler = () => {
+				if (!map.getSource("trees")) return;
+				applyFeatureState(map, id, isSelected);
+				map.off("styledata", handler);
+			};
+			map.on("styledata", handler);
 		}
 
 		if (isSelected) {
