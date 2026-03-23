@@ -16,7 +16,7 @@ export const de: Content = {
 				label: "**Diese Karte verbessern**",
 			},
 			feedback: {
-				href: "https://citylabberlin.typeform.com/to/kCdnCgvC#product_id=GdK",
+				href: "mailto:giessdenkiez@citylab-berlin.org",
 				label: "Feedback",
 			},
 			imprint: {
@@ -147,7 +147,7 @@ export const de: Content = {
 				slackButton: "Zur Slack Community",
 				feedback: `Du hast **Feedback** zu *Gieß den Kiez*?
 
-[Beantworte uns gerne ein paar Fragen](https://citylabberlin.typeform.com/to/kCdnCgvC#product_id=GdK)`,
+[Schreib uns eine E-Mail](mailto:giessdenkiez@citylab-berlin.org)`,
 			},
 			qa: [
 				{
@@ -181,22 +181,19 @@ Pumpen aus [Open Street Map](https://www.openstreetmap.de)`,
 		faq: {
 			title: "F.A.Q.",
 			description:
-				"Basierend auf dem regen Austausch unserer Community auf Slack & euren Rückmeldungen per Email und Telefon, haben wir ein kleines FAQ angelegt. Hier werden die am häuftigsten gestellten Fragen beantwortet.",
+				"Basierend auf euren Rückmeldungen per Email haben wir ein kleines FAQ angelegt. Hier werden die am häuftigsten gestellten Fragen beantwortet.",
 			qa: [
 				{
 					question: "Wie kann ich mitmachen?",
 					answer: `
 Informieren:
 
-Neugierig, welcher Baum vor Deiner Tür steht? Unsere interaktive Karte visualisiert über 800.000 Straßen- und Anlagenbäume Bonns. Wenn Du mehr über einen Baum erfahren willst, navigiere und zoome Dich zum gewünschten Standort und klicke auf den farbigen Punkt. Nun werden Dir im Menüband links zahlreiche Informationen zum ausgewählten Baum angezeigt.
+Neugierig, welcher Baum vor Deiner Tür steht? Unsere interaktive Karte visualisiert 65.663 Straßen- und Anlagenbäume Bonns. Wenn Du mehr über einen Baum erfahren willst, navigiere und zoome Dich zum gewünschten Standort und klicke auf den farbigen Punkt. Nun werden Dir im Menüband links zahlreiche Informationen zum ausgewählten Baum angezeigt.
 
 Bäume bewässern und adoptieren:
 
 Du möchtest aktiv werden oder bist bereits aktiv am Gießen? Auf Gieß den Kiez kannst Du eintragen, ob und mit wie viel Wasser Du einen Baum gegossen hast. Bäume können auch adoptiert werden. Die adoptierten Bäume erscheinen im eigenen Nutzerprofil und können schneller wiedergefunden werden. So können andere Nachbarn in der Umgebung sehen, welche Bäume ihre Aufmerksamkeit benötigen. Um Bäume zu bewässern und zu adoptieren, lege dazu zunächst ein Profil mit einer gültigen Email-Adresse an und logge Dich im Anschluss ein. Nun kannst Du Deine Gieß-Aktionen entsprechend dokumentieren und sehen, ob und wie oft Bäume in Deinem Kiez bereits von anderen Nutzer:innen gegossen wurden.
-
-Vernetzen:
-
-Über unseren öffentlichen [Slack Channel](https://join.slack.com/t/giessdenkiez/shared_invite/zt-e3et281u-xON4UmBZpKavzDRkw5HmCQ) kannst Du Dich mit anderen Gießer:innen austauschen und defekte Pumpen in Deinem Kiez melden.`,
+`,
 				},
 				{
 					question:
@@ -214,26 +211,26 @@ Die Straßen- und Grünflächenämter gießen regelmäßig mehrere tausend Bäum
 					answer: `
 Je nach Alter, Standort und Baumart benötigen Bäume unterschiedlich viel Wasser. Insbesondere Jungbäume (0-10 Jahre) sind in Zeiten von Trockenheit, Strahlung und Hitze auf eine regelmäßige Wässerung angewiesen. Das Amt für Umwelt und Stadtgrün der Bundesstadt Bonn versorgt Jungbäume in der Regel bis zu einem Alter von 8 Jahren (die ersten 4 Jahre durch beauftragte Unternehmen, danach durch die Stadt), wodurch besonders Jungbäume zwischen 8 und 10 Jahren unsere Aufmerksamkeit benötigen.
 
-Vor jeder Gießung solltet ihr euch den Baum zunächst anschauen und überlegen ob der Baum wirklich Wasser benötigt. Wichtige Indikatoren für bedarfsgerechtes gießen sind bspw. das Alter (jung/alt), der Stammunfang (dünn/dick), der Standort (sonnig/schattig) oder die Beschaffenheit frischer Triebe (kahl/grün) eines Baumes. Bevor ihr mit dem gießen loslegt, empfehlen wir den ausgetrockneten Boden vor dem Gießen aufzulockern, sodass das Wasser in den Boden eindringen kann und nicht oberirdisch abläuft oder sich falsch anstaut. Angelehnt an das Bonner [Handbuch Gute Pflege](https://www.berlin.de/sen/uvk/natur-und-gruen/stadtgruen/pflegen-und-unterhalten/handbuch-gute-pflege), solltet ihr lieber selten, dafür mit größeren Menge an Wasser zu gießen. Das Handbuch empfiehlt für frisch gepflanzte Bäume bis zu 200l pro Gießung. So sorgt ihr dafür, dass die Bodenfeuchte auch in der Tiefe erhöht wird.
+Vor jeder Gießung solltet ihr euch den Baum zunächst anschauen und überlegen ob der Baum wirklich Wasser benötigt. Wichtige Indikatoren für bedarfsgerechtes gießen sind bspw. das Alter (jung/alt), der Stammunfang (dünn/dick), der Standort (sonnig/schattig) oder die Beschaffenheit frischer Triebe (kahl/grün) eines Baumes. Bevor ihr mit dem gießen loslegt, empfehlen wir den ausgetrockneten Boden vor dem Gießen aufzulockern, sodass das Wasser in den Boden eindringen kann und nicht oberirdisch abläuft oder sich falsch anstaut. Angelehnt an das Bonner [Handbuch Gute Pflege (Berlin)](https://www.berlin.de/sen/uvk/natur-und-gruen/stadtgruen/pflegen-und-unterhalten/handbuch-gute-pflege), solltet ihr lieber selten, dafür mit größeren Menge an Wasser zu gießen. Das Handbuch empfiehlt für frisch gepflanzte Bäume bis zu 200l pro Gießung. So sorgt ihr dafür, dass die Bodenfeuchte auch in der Tiefe erhöht wird.
 Auch zu empfehlen sind sogenannte Gießsäcke aus denen das Wasser nur sehr langsam austritt, kaum oberflächlich abläuft und somit kontinuierlich in den Boden sickert.
 					`,
 				},
 				{
 					question: "Wie gehe ich mit der Wasserknappheit um?",
-					answer: `In Zeiten von Trockenheit und Wasserknappheit ist es besonders wichtig, sparsam mit Wasser umzugehen. Wenn Du Deinen Baum gießen möchtest, dann frage dich zunächst immer, welcher Baum den größten Bedarf hat. Gieße lieber seltener, dafür aber mit größeren Mengen Wasser. So wird der Baum dazu angeregt, tiefere Wurzeln zu bilden und ist besser gegen Trockenheit gewappnet. Um eine Übersicht über aktuelle Bodenfeuchte in Bonn zu bekommen, lohnt sich ein Blick in die [Bewässerungsempfehlung für Stadtbäume](https://www.berlin.de/pflanzenschutzamt/stadtgruen/beratung/bewaesserungsempfehlung-fuer-stadtbaeume/) des Pflanzenschutzamt Bonns. Versuche das Wasser der öffentlichen Straßenpumpen, statt Trinkwasser aus der Hausleitung zu nutzen. Langfristig lohnt es sich, Regenwasser aufzufangen und in Regentonnen zu speichern. Nachbarschatsinitiativen wie [Wassertanke](https://wassertanke.org/) helfen Euch bei deratigen Nachbarschaftsprojekten.`,
+					answer: `In Zeiten von Trockenheit und Wasserknappheit ist es besonders wichtig, sparsam mit Wasser umzugehen. Wenn Du Deinen Baum gießen möchtest, dann frage dich zunächst immer, welcher Baum den größten Bedarf hat. Gieße lieber seltener, dafür aber mit größeren Mengen Wasser. So wird der Baum dazu angeregt, tiefere Wurzeln zu bilden und ist besser gegen Trockenheit gewappnet. Um eine Übersicht über aktuelle Bodenfeuchte in Bonn zu bekommen, lohnt sich ein Blick in die [Bewässerungsempfehlung für Stadtbäume (Berlin)](https://www.berlin.de/pflanzenschutzamt/stadtgruen/beratung/bewaesserungsempfehlung-fuer-stadtbaeume/) des Pflanzenschutzamt Bonns. Versuche das Wasser der öffentlichen Straßenpumpen, statt Trinkwasser aus der Hausleitung zu nutzen. Langfristig lohnt es sich, Regenwasser aufzufangen und in Regentonnen zu speichern. Nachbarschatsinitiativen wie [Wassertanke](https://wassertanke.org/) helfen Euch bei deratigen Nachbarschaftsprojekten.`,
 				},
 				{
 					question:
 						"An wen kann ich mich wenden, wenn Pumpen kaputt oder beschädigt sind?",
-					answer: `Für die Infrastruktur der Straßen, zu denen auch die öffentlichen Schwengelpumpen zählen, sind die jeweiligen Straßen- und Grünflächenämter der Bezirke verantwortlich. Sollten Pumpen kaputt oder beschädigt sein, kann dort Reparaturbedarf gemeldet werden. Die Standorte der Pumpen in der Karte laden wir wöchentlich aus der Datenbank von Open Street Map. Wenn Ihr helfen wollt, die Daten zu verbessern, indem ihr zum Beispiel eine defekte Pumpe meldet, könnt ihr das in unserem [Slack Channel #pumpen-melden](https://app.slack.com/client/T012K4SDYBY/C019SJQDPL7) tun. Die OSM-Community hat dann die Möglichkeit eure Informationen in die Datenbank einzutragen.`,
+					answer: `Für die Infrastruktur der Straßen, zu denen auch die öffentlichen Schwengelpumpen zählen, sind die jeweiligen Straßen- und Grünflächenämter der Bezirke verantwortlich. Sollten Pumpen kaputt oder beschädigt sein, kann dort Reparaturbedarf gemeldet werden. Die Standorte der Pumpen in der Karte laden wir wöchentlich aus der Datenbank von Open Street Map. Wenn Ihr helfen wollt, die Daten zu verbessern, könnt ihr defekte Pumpen direkt in [OpenStreetMap](https://www.openstreetmap.org) eintragen.`,
 				},
 				{
 					question: "Wie wird mit technischen Problemen umgegangen?",
-					answer: `Bei der Beteiligungsplattform „Gieß den Kiez” handelt es sich um einen Prototypen und demnach um eine Beta-Version einer Web-App. Wir sind uns einigen technischen Hürden bewusst, sind aber auf eure Mithilfe angewiesen. Euer technisches Feedback und eure Fragen nehmen wir gerne in unserem [Slack Channel](https://join.slack.com/t/giessdenkiez/shared_invite/zt-e3et281u-xON4UmBZpKavzDRkw5HmCQ) oder per Mail entgegen. Wer sich in der „Tech-Welt” zu Hause fühlt, ist herzlich zur Mitarbeit in unserem [Open Source GitHub Repository](https://github.com/technologiestiftung/giessdenkiez-de) eingeladen und kann seine Issues oder Code Fixes direkt in das Repository kommentieren.`,
+					answer: `Bei der Beteiligungsplattform „Gieß den Kiez” handelt es sich um einen Prototypen und demnach um eine Beta-Version einer Web-App. Wir sind uns einigen technischen Hürden bewusst, sind aber auf eure Mithilfe angewiesen. Euer technisches Feedback und eure Fragen nehmen wir gerne per Mail entgegen. Wer sich in der „Tech-Welt” zu Hause fühlt, ist herzlich zur Mitarbeit in unserem [Open Source GitHub Repository](https://github.com/technologiestiftung/giessdenkiez-de) eingeladen und kann seine Issues oder Code Fixes direkt in das Repository kommentieren.`,
 				},
 				{
 					question: "Warum lädt die Website nicht oder nur sehr langsam?",
-					answer: `Wenn die Seite zum ersten Mal geöffnet wird, lädt der Browser über 800.000 Datenpunkte – das kann eine Weile dauern! Unabhängig davon, kann es zu leicht unterschiedlichen Darstellungen bei der Verwendung unterschiedlicher Browser kommen. Für die beste „Experience” empfehlen wir die Nutzung von Chrome oder Firefox Desktop. Die häufigsten Probleme lassen sich erfahrungsgemäß beseitigen, wenn der Browser nicht veraltet, respektive die neueste Version installiert ist und eine stabile Internetverbindung (LAN oder WLAN) besteht. Die Nutzung über das Smartphone (Mobilfunknetz) kann zu Performance-Problemen (Seite lädt langsam) führen. Sollten wiederholt Probleme auftreten, könnt ihr diese in unserem [Slack Channel](https://join.slack.com/t/giessdenkiez/shared_invite/zt-e3et281u-xON4UmBZpKavzDRkw5HmCQ), per Mail oder via GitHub Issue unter Angabe des benutzten Geräts, des Betriebssystems, des Browsers und Version des Browsers melden.`,
+					answer: `Wenn die Seite zum ersten Mal geöffnet wird, lädt der Browser 65.663 Datenpunkte – das kann eine Weile dauern! Unabhängig davon, kann es zu leicht unterschiedlichen Darstellungen bei der Verwendung unterschiedlicher Browser kommen. Für die beste „Experience” empfehlen wir die Nutzung von Chrome oder Firefox Desktop. Die häufigsten Probleme lassen sich erfahrungsgemäß beseitigen, wenn der Browser nicht veraltet, respektive die neueste Version installiert ist und eine stabile Internetverbindung (LAN oder WLAN) besteht. Die Nutzung über das Smartphone (Mobilfunknetz) kann zu Performance-Problemen (Seite lädt langsam) führen. Sollten wiederholt Probleme auftreten, könnt ihr diese per Mail oder via GitHub Issue unter Angabe des benutzten Geräts, des Betriebssystems, des Browsers und Version des Browsers melden.`,
 				},
 				{
 					question:
@@ -534,7 +531,7 @@ Der Bezirk ${district} hat uns zusätzliche Informationen zur individuellen Gie�
 		actionTitleWinter: "Erkunden!",
 		discoverTitle: "Entdecken",
 		discoverContent:
-			"Die Karte visualisiert über 900.000 Stadtbäume (Stand 2025) und zeigt Informationen zu Art, Alter und Wasserbedarf an. Nutze die Filter- und Suchfunktionen, um schnell einen Überblick zu erhalten.",
+			"Die Karte visualisiert 65.663 Stadtbäume und zeigt Informationen zu Art, Alter und Wasserbedarf an. Nutze die Filter- und Suchfunktionen, um schnell einen Überblick zu erhalten.",
 		waterTitle: "Gießen",
 		waterContent:
 			"Schnapp Dir eine Gießkanne und werde Teil der Gieß-Community! Bereits über tausend Aktive haben sich für die Bäume Bonns zusammengeschlossen und tragen ihre Gießungen regelmäßig ein.",
@@ -567,7 +564,7 @@ Der Bezirk ${district} hat uns zusätzliche Informationen zur individuellen Gie�
 			unit: "mal",
 			legend: "Anzahl der Gießungen",
 			hint: (currentYear) => `wurde im Jahr ${currentYear} gegossen.`,
-			backContent: `Die Gießaktivität variiert in den zwölf Bonner Bezirken je nach ehrenamtlichem Engagement. In einigen Bezirken haben sich engagierte Anwohner:innen bereits zu Gießgruppen organisiert ([Slack Community](https://giessdenkiez.slack.com/ssb/redirect)).
+			backContent: `Die Gießaktivität variiert in den zwölf Bonner Bezirken je nach ehrenamtlichem Engagement. In einigen Bezirken haben sich engagierte Anwohner:innen bereits zu Gießgruppen organisiert.
 
 Zudem ist der Bedarf der bezirklichen [Straßen- und Grünflächenamt (SGA)](https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/) unterschiedlich. Um bestmöglich zu helfen, sollte man das zuständige SGA zuvor kontaktieren - und schon kann es losgehen.`,
 		},
@@ -596,7 +593,7 @@ Datenquelle: [Wetterdaten (DWD)](https://opendata.dwd.de/)`,
 
 Eine Gießung sollte eher mehr als weniger Liter auf einmal beinhalten, damit sich das Wurzelwerk der durstigen Jungbäume nach unten ausbilden kann.
 
-Aber Achtung! Jungbäume können auch überwässert werden. Mehr Informationen zur [Bewässerungsempfehlung für Stadtbäume](https://www.berlin.de/pflanzenschutzamt/stadtgruen/beratung/bewaesserungsempfehlung-fuer-stadtbaeume/).`,
+Aber Achtung! Jungbäume können auch überwässert werden. Mehr Informationen zur [Bewässerungsempfehlung für Stadtbäume (Berlin)](https://www.berlin.de/pflanzenschutzamt/stadtgruen/beratung/bewaesserungsempfehlung-fuer-stadtbaeume/).`,
 		},
 		treeSpeciesStat: {
 			title: "Baumarten",

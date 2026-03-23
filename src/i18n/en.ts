@@ -16,7 +16,7 @@ export const en: Content = {
 				label: "**Improve this map**",
 			},
 			feedback: {
-				href: "https://citylabberlin.typeform.com/to/kCdnCgvC#product_id=GdK",
+				href: "mailto:giessdenkiez@citylab-berlin.org",
 				label: "Feedback",
 			},
 			imprint: {
@@ -146,7 +146,7 @@ export const en: Content = {
 				slackButton: "Go to Slack Community",
 				feedback: `Do you have **feedback** on *Gieß den Kiez*?
 				
-[Feel free to answer a few questions](https://citylabberlin.typeform.com/to/kCdnCgvC#product_id=GdK)`,
+[Send us an email](mailto:giessdenkiez@citylab-berlin.org)`,
 			},
 			qa: [
 				{
@@ -180,21 +180,18 @@ Pumps from [Open Street Map](https://www.openstreetmap.de)`,
 		faq: {
 			title: "F.A.Q.",
 			description:
-				"Based on the active exchange in our Slack community as well as your feedback via email and telephone, we have created a small FAQ. The most frequently asked questions are answered here.",
+				"Based on your feedback via email, we have created a small FAQ. The most frequently asked questions are answered here.",
 			qa: [
 				{
 					question: "How can I participate?",
 					answer: `Explore:
 
-Curious which tree is in front of your door? Our interactive map visualizes over 800,000 street trees of Bonn. If you want to find out more about a tree, navigate and zoom to the desired location and click on the colored dot. You will now see a lot of information about the selected tree.
+Curious which tree is in front of your door? Our interactive map visualizes 65,663 street trees of Bonn. If you want to find out more about a tree, navigate and zoom to the desired location and click on the colored dot. You will now see a lot of information about the selected tree.
 
 Watering and adopting trees:
 
 Do you want to get active or are you already actively watering? On Gieß den Kiez, you can enter when and with how much water you watered a tree. Trees can also be adopted. The adopted trees appear in your own user profile and can be found more quickly. This allows other neighbors in the area to see which trees need their attention. To water and adopt trees, first create a profile with a valid email address and then log in.
-
-Connect:
-
-You can use our public [Slack channel](https://join.slack.com/t/giessdenkiez/shared_invite/zt-e3et281u-xON4UmBZpKavzDRkw5HmCQ) to exchange ideas with others, report defective pumps in your neighborhood or connect to jointly water your neighborhood.`,
+`,
 				},
 				{
 					question: "What can I do if trees are not registered correctly?",
@@ -211,26 +208,26 @@ The street and green space authorities are already watering thousands of trees, 
 					answer: `
 Trees require different amounts of water depending on their age, location and species. Young trees (0-10 years) in particular are dependent on frequent waterings in times of drought, radiation and heat. Bonn's Amt für Umwelt und Stadtgrün typically takes care of young trees up to the age of 8 years (the first 4 years by contracted companies, then by the city itself), which means that young trees between 8 and 10 years old require your attention.
 
-Before watering, you should first look at the tree and consider whether it really needs water. Important indicators for need-based watering include the age (young/old), trunk circumference (thin/thick), location (sunny/shady), and the condition of fresh shoots (bare/green) of a tree. Before you start watering, we recommend loosening the dry soil so that the water can penetrate the ground instead of running off or pooling on the surface. Based on Bonn's [Good Care Manual](https://www.berlin.de/sen/uvk/natur-und-gruen/stadtgruen/pflegen-und-unterhalten/handbuch-gute-pflege), it is better to water less frequently but with larger amounts of water. The manual recommends up to 200 liters per watering for newly planted trees. This ensures that the soil moisture is also increased at depth. So-called watering bags are also recommended, from which the water only emerges very slowly, hardly runs off the surface and therefore seeps continuously into the soil.
+Before watering, you should first look at the tree and consider whether it really needs water. Important indicators for need-based watering include the age (young/old), trunk circumference (thin/thick), location (sunny/shady), and the condition of fresh shoots (bare/green) of a tree. Before you start watering, we recommend loosening the dry soil so that the water can penetrate the ground instead of running off or pooling on the surface. Based on Bonn's [Good Care Manual (Berlin)](https://www.berlin.de/sen/uvk/natur-und-gruen/stadtgruen/pflegen-und-unterhalten/handbuch-gute-pflege), it is better to water less frequently but with larger amounts of water. The manual recommends up to 200 liters per watering for newly planted trees. This ensures that the soil moisture is also increased at depth. So-called watering bags are also recommended, from which the water only emerges very slowly, hardly runs off the surface and therefore seeps continuously into the soil.
 					`,
 				},
 				{
 					question: `How do I deal with water scarcity?`,
-					answer: `In times of drought and water scarcity, it is especially important to use water sparingly. If you want to water your tree, first ask yourself which tree has the greatest need. Water less frequently, but with larger amounts of water. This encourages the tree to develop deeper roots and become more resilient to drought. To get an overview of the current soil moisture in Bonn, it is worth checking the [Irrigation recommendation for urban trees](https://www.berlin.de/pflanzenschutzamt/stadtgruen/beratung/bewaesserungsempfehlung-fuer-stadtbaeume/) of Bonn's Plant Protection Office. Try to use water from public street pumps instead of tap water from your home. In the long term, it is worth collecting rainwater and storing it in rain barrels. Neighborhood initiatives like [Wassertanke](https://wassertanke.org) can help you with such community projects.`,
+					answer: `In times of drought and water scarcity, it is especially important to use water sparingly. If you want to water your tree, first ask yourself which tree has the greatest need. Water less frequently, but with larger amounts of water. This encourages the tree to develop deeper roots and become more resilient to drought. To get an overview of the current soil moisture in Bonn, it is worth checking the [Irrigation recommendation for urban trees (Berlin)](https://www.berlin.de/pflanzenschutzamt/stadtgruen/beratung/bewaesserungsempfehlung-fuer-stadtbaeume/) of Bonn's Plant Protection Office. Try to use water from public street pumps instead of tap water from your home. In the long term, it is worth collecting rainwater and storing it in rain barrels. Neighborhood initiatives like [Wassertanke](https://wassertanke.org) can help you with such community projects.`,
 				},
 				{
 					question: "Who can I contact if pumps are broken or damaged?",
-					answer: `The respective district roads and green spaces authorities are responsible for the infrastructure of the roads, which also includes the public hand pumps. If pumps are broken or damaged, the need for repairs can be reported there. We load the locations of the pumps on the map weekly from the Open Street Map database. If you want to help improve the data, for example by reporting a defective pump, you can do so in our [Slack Channel #pump-report](https://app.slack.com/client/T012K4SDYBY/C019SJQDPL7). The OSM community then has the opportunity to enter your information into the database.`,
+					answer: `The respective district roads and green spaces authorities are responsible for the infrastructure of the roads, which also includes the public hand pumps. If pumps are broken or damaged, the need for repairs can be reported there. We load the locations of the pumps on the map weekly from the Open Street Map database. If you want to help improve the data, you can add defective pumps directly in [OpenStreetMap](https://www.openstreetmap.org).`,
 				},
 				{
 					question: "How are technical problems handled?",
-					answer: `The participation platform “Gieß den Kiez” is a prototype and therefore a beta version of a web app. We are aware of some technical hurdles, but depend on your help. We are happy to receive your technical feedback and questions in our [Slack Channel](https://join.slack.com/t/giessdenkiez/shared_invite/zt-e3et281u-xON4UmBZpKavzDRkw5HmCQ) or by email. Anyone who feels at home in the “tech world” is welcome to participate in our [Open Source GitHub Repository](https://github.com/technologiestiftung/giessdenkiez-de) invited and can comment on his issues or code fixes directly in the repository.`,
+					answer: `The participation platform “Gieß den Kiez” is a prototype and therefore a beta version of a web app. We are aware of some technical hurdles, but depend on your help. We are happy to receive your technical feedback and questions by email. Anyone who feels at home in the “tech world” is welcome to participate in our [Open Source GitHub Repository](https://github.com/technologiestiftung/giessdenkiez-de) invited and can comment on his issues or code fixes directly in the repository.`,
 				},
 				{
 					question: "Why is the website not loading or loading very slowly?",
-					answer: `When the page is first opened, the browser loads over 800,000 data points - this can take a while! Regardless, there may be slightly different displays when using different browsers. For the best experience, we recommend using Chrome or Firefox Desktop. Experience has shown that the most common problems can be solved if the browser is not outdated or the latest version is installed and there is a stable internet connection (LAN or WLAN). 
+					answer: `When the page is first opened, the browser loads 65,663 data points - this can take a while! Regardless, there may be slightly different displays when using different browsers. For the best experience, we recommend using Chrome or Firefox Desktop. Experience has shown that the most common problems can be solved if the browser is not outdated or the latest version is installed and there is a stable internet connection (LAN or WLAN). 
 
-Use via smartphone (mobile network) can lead to performance problems (page loads slowly). If problems occur repeatedly, you can report them in our [Slack Channel](https://join.slack.com/t/giessdenkiez/shared_invite/zt-e3et281u-xON4UmBZpKavzDRkw5HmCQ), Report by email or via GitHub Issue, stating the device used, the operating system, the browser and the browser version.`,
+Use via smartphone (mobile network) can lead to performance problems (page loads slowly). If problems occur repeatedly, you can report them by email or via GitHub Issue, stating the device used, the operating system, the browser and the browser version.`,
 				},
 				{
 					question: "What should I do if I watered a tree incorrectly?",
@@ -523,7 +520,7 @@ The district ${district} has provided us with additional information on the indi
 		actionTitleWinter: "Explore!",
 		discoverTitle: "Discover",
 		discoverContent:
-			"The map visualizes over 900,000 urban trees (as of 2025) and displays information on species, age and water requirements. Use the filter and search functions to quickly get an overview.",
+			"The map visualizes 65,663 urban trees and displays information on species, age and water requirements. Use the filter and search functions to quickly get an overview.",
 		waterTitle: "Water",
 		waterContent:
 			"Grab a watering can and become part of the watering community! Over a thousand active people have already joined forces for Bonn's trees and are regularly submitting their waterings.",
@@ -556,7 +553,7 @@ The district ${district} has provided us with additional information on the indi
 			unit: "times",
 			hint: (currentYear) => `were poured in ${currentYear}.`,
 			legend: "Number of waterings",
-			backContent: `The watering activity varies in the twelve Bonn districts depending on the level of volunteer involvement. In some districts, engaged residents have already organized themselves into watering groups ([Join the community](https://giessdenkiez.slack.com/ssb/redirect)).
+			backContent: `The watering activity varies in the twelve Bonn districts depending on the level of volunteer involvement. In some districts, engaged residents have already organized themselves into watering groups.
 
 In addition, the needs of the [district’s street and green space offices (SGA)](https://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/) vary. In order to provide the best possible help, you should contact the responsible SGA before the first watering - now you’re ready to join the big community!`,
 		},

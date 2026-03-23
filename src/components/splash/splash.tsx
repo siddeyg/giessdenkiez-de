@@ -5,7 +5,6 @@ import { CloseIcon } from "../icons/close-icon";
 import { MapIcon } from "../icons/map-icon";
 import { WateringIcon } from "../icons/watering-icon";
 import { TreeSplashIcon } from "../icons/tree-splash-icon";
-import { HiThereIcon } from "../icons/hi-there-icon";
 import { LanguageToggle } from "../router/languageToggle";
 import { useI18nStore } from "../../i18n/i18n-store";
 import { SplashTreeIcon } from "../icons/splash-tree-icon";
@@ -175,12 +174,6 @@ export const Splash: React.FC = () => {
 						title={i18n.splash.adoptTitle}
 						content={i18n.splash.adoptContent}
 						icon={<TreeSplashIcon className="w-6 h-6 2xl:w-8 2xl:h-8" />}
-					/>
-
-					<SectionHeading
-						title={i18n.splash.networkTitle}
-						content={i18n.splash.networkContent}
-						icon={<HiThereIcon className="w-6 h-6 2xl:w-8 2xl:h-8" />}
 					/>
 				</div>
 			</div>

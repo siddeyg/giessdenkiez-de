@@ -3,8 +3,6 @@ import { useI18nStore } from "../../i18n/i18n-store";
 
 const logoCitylab = "https://logos.citylab-berlin.org/logo-citylab-color.svg";
 const logoTSB = "https://logos.citylab-berlin.org/logo-tsb-outline.svg";
-const logoBerlin =
-	"https://logos.citylab-berlin.org/logo-senatskanzlei-buergermeister-horizontal.svg";
 
 export const Credits: React.FC = () => {
 	const i18n = useI18nStore().i18n();
@@ -35,20 +33,6 @@ export const Credits: React.FC = () => {
 						/>
 					</a>
 				</div>
-			</div>
-			<div className="w-[46%] flex flex-col gap-4">
-				<div>{i18n.info.credits.fundedBy}</div>
-				<a
-					target="_blank"
-					rel="noopener noreferrer"
-					href="https://www.berlin.de/senatskanzlei/"
-				>
-					<img
-						className="-translate-y-0.5"
-						src={logoBerlin}
-						alt="Logo Berlin"
-					/>
-				</a>
 			</div>
 		</div>
 	);
