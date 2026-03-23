@@ -136,10 +136,7 @@ export const en: Content = {
 				question: "About the project",
 				answer: `The consequences of climate change, especially the dry and hot summers, are putting a strain on Bonn's ecosystem. Our urban trees are drying out and suffering long-term damage: In recent years, more and more trees had to be felled and their lifespan is decreasing. The public is now regularly called upon for support, but in a so far uncoordinated manner. Through this project we want to improve this and enable coordinated citizen participation in the watering of urban green spaces.`,
 
-				aboutUsTitle: "About Us",
-				aboutUsAnswer: `“Gieß den Kiez” is a project of the [CityLAB Bonn](https://www.citylab-berlin.org/).
-				The CityLAB is a public innovation laboratory in the former Bonn-Tempelhof airport. Together with a large network of administration, civil society, science and start-ups, we are working on new ideas to make Bonn even more liveable. The CityLAB is a project of the Technologiestiftung Bonn and is funded by the Bonn Senate Chancellery.`,
-				press: `For press inquiries please contact [Anna Hantelmann](mailto:anna.hantelmann@ts.berlin?subject=giessdenkiez.de%20Presseanfrage).`,
+					press: `For press inquiries please contact [Anna Hantelmann](mailto:anna.hantelmann@ts.berlin?subject=giessdenkiez.de%20Presseanfrage).`,
 				communityTitle: "Community",
 				communityAnswer:
 					"Would you like to find out more about watering trees, report pumps or exchange ideas with other active users? Then join our Slack chat!",
@@ -195,11 +192,11 @@ Do you want to get active or are you already actively watering? On Gieß den Kie
 				},
 				{
 					question: "What can I do if trees are not registered correctly?",
-					answer: `We obtain the tree data set with all attributes such as address, tree species and planting year for each tree from the geoportal of the city of Bonn, the FIS broker. The tree register provided in the geoportal is based on the district-aggregated data from the road and green space authorities. It can therefore happen that data from trees is out of date or that properties differ from current reality. Unfortunately, we cannot make any changes to the tree register ourselves. Any deviations can only be reported directly to the responsible district authority. Once a year, the green space authorities publish an updated tree register, which we link to Gieß den Kiez after publication.`,
+					answer: `We obtain the tree data set with all attributes such as address, tree species and planting year for each tree from the geoportal of the city of Bonn. The tree register provided in the geoportal is based on data from the road and green space authorities. It can therefore happen that data from trees is out of date or that properties differ from current reality. Unfortunately, we cannot make any changes to the tree register ourselves. Any deviations can only be reported directly to the Amt für Umwelt und Stadtgrün der Bundesstadt Bonn. Once a year, the green space authorities publish an updated tree register, which we link to Gieß den Kiez after publication.`,
 				},
 				{
 					question: "Why should I take action and water trees?",
-					answer: `The long periods of drought and heat of the last two years have caused immense damage to Bonn's urban greenery. Between 2018 and 2019 alone, over 7,000 trees had to be felled, not solely due to drought damage.
+					answer: `The long periods of drought and heat in recent years have caused immense damage to Bonn's urban greenery. More and more trees are suffering long-term drought damage or have to be felled.
 
 The street and green space authorities are already watering thousands of trees, but cannot keep up with the watering during Bonn's hot summers. Since the green space authorities are organized by district, each district works slightly different, which makes holistic and needs-based coordination difficult. Through the platform, we would like to give citizens the opportunity to help trees specifically based on their current water supply and to obtain further information. The goal is to save as many trees as possible through neighborly involvement.`,
 				},
@@ -243,7 +240,7 @@ Use via smartphone (mobile network) can lead to performance problems (page loads
 				},
 				{
 					question: "Why aren't all of Bonn's trees shown?",
-					answer: `Gieß den Kiez is based on the tree register. The tree register is a city directory in which (city/street or park) trees are managed and which is provided by the street and green spaces authorities. However, the green space authorities are not responsible for all of Bonn's trees. The trees in the Plänterwald, for example, are subject to the forestry office. These trees therefore do not appear in Gieß den Kiez.`,
+					answer: `Gieß den Kiez is based on the tree register. The tree register is a city directory in which (city/street or park) trees are managed and which is provided by the street and green spaces authorities. However, the green space authorities are not responsible for all of Bonn's trees. Trees in certain parks and forested areas, for example, fall under the forestry office or other authorities. These trees therefore do not appear in Gieß den Kiez.`,
 				},
 			],
 		},

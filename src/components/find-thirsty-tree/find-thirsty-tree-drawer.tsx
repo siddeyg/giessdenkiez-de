@@ -1,5 +1,6 @@
 import React from "react";
 import { useI18nStore } from "../../i18n/i18n-store";
+import { useMapStore } from "../map/map-store";
 import { useUrlState } from "../router/store";
 import { useTreeStore } from "../tree-detail/stores/tree-store";
 import { ThirstyTree } from "./use-find-thirsty-tree";
@@ -19,12 +20,13 @@ export const FindThirstyTreeDrawer: React.FC<Props> = ({
 }) => {
 	const i18n = useI18nStore().i18n();
 	const setPathname = useUrlState((s) => s.setPathname);
+	const map = useMapStore((s) => s.map);
 
 	const handleSelectTree = (tree: ThirstyTree) => {
 		onClose();
 		setPathname("/map");
-		const abortController = new AbortController();
-		useTreeStore.getState().refreshTreeData(tree.id, abortController);
+		useTreeStore.getState().setSelectedTreeId(tree.id);
+		map?.flyTo({ center: [tree.lng, tree.lat], zoom: 17 });
 	};
 
 	const ageLabel = (pflanzjahr: number | null): string => {
