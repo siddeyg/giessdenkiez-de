@@ -27,6 +27,7 @@ export function useMapTreesInteraction(map: mapboxgl.Map | undefined) {
 		treeAgeRange,
 		areOnlyAllAdoptedTreesVisible,
 		areLastWateredTreesVisible,
+		areThirstyTreesVisible,
 		lat,
 		lng,
 		zoom,
@@ -56,6 +57,7 @@ export function useMapTreesInteraction(map: mapboxgl.Map | undefined) {
 					isSomeFilterActive: isSomeFilterActive(),
 					areOnlyAllAdoptedTreesVisible,
 					areLastWateredTreesVisible,
+					areThirstyTreesVisible,
 					treeAgeRange,
 				}),
 			);
@@ -70,6 +72,7 @@ export function useMapTreesInteraction(map: mapboxgl.Map | undefined) {
 					isSomeFilterActive: isSomeFilterActive(),
 					areOnlyAllAdoptedTreesVisible,
 					areLastWateredTreesVisible,
+					areThirstyTreesVisible,
 					treeAgeRange,
 				}),
 			);
@@ -78,6 +81,7 @@ export function useMapTreesInteraction(map: mapboxgl.Map | undefined) {
 		map,
 		areOnlyAllAdoptedTreesVisible,
 		areLastWateredTreesVisible,
+		areThirstyTreesVisible,
 		treeAgeRange,
 	]);
 

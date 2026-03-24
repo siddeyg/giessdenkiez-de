@@ -18,6 +18,8 @@ export const Filter: React.FC = () => {
 		resetFilters,
 		areLastWateredTreesVisible,
 		setAreLastWateredTreesVisible,
+		areThirstyTreesVisible,
+		setAreThirstyTreesVisible,
 	} = useFilterStore();
 
 	const onTogglePumps = useCallback(() => {
@@ -27,6 +29,10 @@ export const Filter: React.FC = () => {
 	const onToggleLastWateredTrees = useCallback(() => {
 		setAreLastWateredTreesVisible(!areLastWateredTreesVisible);
 	}, [setAreLastWateredTreesVisible, areLastWateredTreesVisible]);
+
+	const onToggleThirstyTrees = useCallback(() => {
+		setAreThirstyTreesVisible(!areThirstyTreesVisible);
+	}, [setAreThirstyTreesVisible, areThirstyTreesVisible]);
 
 	const onToggleAllAdoptedTrees = useCallback(() => {
 		setAreOnlyAllAdoptedTreesVisible(!areOnlyAllAdoptedTreesVisible);
@@ -49,6 +55,11 @@ export const Filter: React.FC = () => {
 							name={i18n.filter.lastWateredTrees}
 							onToggle={onToggleLastWateredTrees}
 							isEnabled={areLastWateredTreesVisible}
+						/>
+						<FilterSwitch
+							name={i18n.filter.thirstyTrees}
+							onToggle={onToggleThirstyTrees}
+							isEnabled={areThirstyTreesVisible}
 						/>
 
 						<FilterSwitch

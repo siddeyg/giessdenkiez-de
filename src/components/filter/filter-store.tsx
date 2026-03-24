@@ -14,6 +14,7 @@ export interface FilterState {
 	isPumpsVisible: boolean;
 	areOnlyAllAdoptedTreesVisible: boolean;
 	areLastWateredTreesVisible: boolean;
+	areThirstyTreesVisible: boolean;
 	isFilterViewVisible: boolean;
 	isSomeFilterActive: () => boolean;
 	getAmountOfActiveFilters: () => number;
@@ -27,6 +28,7 @@ export interface FilterState {
 	setShowPumps: (showPumps: boolean) => void;
 	setAreOnlyAllAdoptedTreesVisible: (showOnlyAllAdoptedTrees: boolean) => void;
 	setAreLastWateredTreesVisible: (showLastWateredTrees: boolean) => void;
+	setAreThirstyTreesVisible: (showThirstyTrees: boolean) => void;
 	showFilterView: () => void;
 	hideFilterView: () => void;
 	toggleFilterView: () => void;
@@ -93,6 +95,7 @@ export const useFilterStore = create<FilterState>()((set, get) => ({
 	areOnlyAllAdoptedTreesVisible: areOnlyAllAdoptedTreesVisibleSearch === "true",
 
 	areLastWateredTreesVisible: areLastWateredTreesVisibleSearch === "true",
+	areThirstyTreesVisible: false,
 
 	isFilterViewVisible: false,
 
@@ -107,6 +110,7 @@ export const useFilterStore = create<FilterState>()((set, get) => ({
 			get().treeAgeRange.max !== initialTreeAgeRange.max ||
 			get().isPumpsVisible ||
 			get().areLastWateredTreesVisible ||
+			get().areThirstyTreesVisible ||
 			get().areOnlyAllAdoptedTreesVisible
 		);
 	},
@@ -129,6 +133,10 @@ export const useFilterStore = create<FilterState>()((set, get) => ({
 		}
 
 		if (get().areLastWateredTreesVisible) {
+			amount = amount + 1;
+		}
+
+		if (get().areThirstyTreesVisible) {
 			amount = amount + 1;
 		}
 
@@ -155,6 +163,10 @@ export const useFilterStore = create<FilterState>()((set, get) => ({
 			[showOnlyAllAdoptedTrees ? "true" : "false"],
 		);
 		useUrlState.getState().setSearchParams(updatedSearchParams);
+	},
+
+	setAreThirstyTreesVisible: (showThirstyTrees) => {
+		set({ areThirstyTreesVisible: showThirstyTrees });
 	},
 
 	setAreLastWateredTreesVisible: (showLastWateredTrees) => {
@@ -218,6 +230,7 @@ export const useFilterStore = create<FilterState>()((set, get) => ({
 			isPumpsVisible: false,
 			areOnlyAllAdoptedTreesVisible: false,
 			areLastWateredTreesVisible: false,
+			areThirstyTreesVisible: false,
 		});
 	},
 

@@ -469,6 +469,7 @@ Der Bezirk ${district} hat uns zus채tzliche Informationen zur individuellen Gie�
 		myAdoptedTrees: "Meine adoptierten B채ume",
 		allAdoptedTrees: "Adoptierte B채ume",
 		lastWateredTrees: "Zuletzt gegossene B채ume",
+		thirstyTrees: "Durstige B채ume",
 		treeAge: "Baumalter",
 		show: "Anzeigen",
 		reset: "Zur체cksetzen",

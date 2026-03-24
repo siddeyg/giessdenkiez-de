@@ -85,11 +85,13 @@ export function useTreeCircleStyle() {
 		isSomeFilterActive,
 		areOnlyAllAdoptedTreesVisible,
 		areLastWateredTreesVisible,
+		areThirstyTreesVisible,
 		treeAgeRange,
 	}: {
 		isSomeFilterActive: boolean;
 		areOnlyAllAdoptedTreesVisible: boolean;
 		areLastWateredTreesVisible: boolean;
+		areThirstyTreesVisible: boolean;
 		treeAgeRange: TreeAgeRange;
 	}): Expression => {
 		const defaultExpression: Expression = [
@@ -218,6 +220,26 @@ export function useTreeCircleStyle() {
 
 		if (areLastWateredTreesVisible) {
 			return isLastWateredAndInAgeRangeExpression;
+		}
+
+		// Thirsty trees filter: show trees below age-based rainfall thresholds
+		// Matches the water-needs model: baby <100, junior <200, senior <300 (radolan_sum in 0.1mm units)
+		const isThirstyTreeExpression: Expression = [
+			"case",
+			["==", ["get", "age"], ""], false,
+			["all", [">=", ["get", "age"], 0], ["<=", ["get", "age"], 5], ["<", ["get", "radolan_sum"], 100]], true,
+			["all", [">", ["get", "age"], 5], ["<=", ["get", "age"], 10], ["<", ["get", "radolan_sum"], 200]], true,
+			["all", [">", ["get", "age"], 10], ["<", ["get", "radolan_sum"], 300]], true,
+			false,
+		];
+
+		if (areThirstyTreesVisible) {
+			return [
+				"case",
+				isThirstyTreeExpression,
+				isTreeInAgeRangeExpression,
+				TREE_GRAY_COLOR,
+			];
 		}
 
 		return [

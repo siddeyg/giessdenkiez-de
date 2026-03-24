@@ -251,6 +251,7 @@ interface Filter {
 	myAdoptedTrees: string;
 	allAdoptedTrees: string;
 	lastWateredTrees: string;
+	thirstyTrees: string;
 	treeAge: string;
 	show: string;
 	reset: string;

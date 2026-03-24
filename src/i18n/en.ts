@@ -458,6 +458,7 @@ The district ${district} has provided us with additional information on the indi
 		myAdoptedTrees: "My adopted trees",
 		allAdoptedTrees: "Adopted trees",
 		lastWateredTrees: "Previously watered trees",
+		thirstyTrees: "Thirsty trees",
 		treeAge: "Tree age",
 		show: "Show",
 		reset: "Reset",
