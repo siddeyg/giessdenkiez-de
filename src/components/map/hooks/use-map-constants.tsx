@@ -42,6 +42,18 @@ export function useMapConstants() {
 		},
 	];
 
+	const GENUS_ICONS = [
+		"ROSSKASTANIE", "HAINBUCHE", "MEHLBEERE", "WEIßDORN",
+		"PLATANE", "ROBINIE", "PAPPEL", "AHORN", "BIRKE", "BUCHE",
+		"EICHE", "ERLE", "ESCHE", "HASEL", "KIEFER", "LINDE",
+		"ULME", "WEIDE", "APFEL", "UNBEKANNT",
+	];
+
+	const MAP_LEAF_IMAGE_ICONS = GENUS_ICONS.map((name) => ({
+		url: `/images/leafs/${name}.png`,
+		id: name,
+	}));
+
 	// Our main breakpoint is 1024px, on desktop-like screens we want to offset the tree circle to the left
 	// because the tree popup is displayed on the right side of the screen. On mobile-like screens we don't
 	// want to offset the tree circle, because the tree popup is displayed full screen.
@@ -66,6 +78,7 @@ export function useMapConstants() {
 		MAP_CENTER_LNG,
 		MAP_CENTER_LAT,
 		MAP_PUMP_IMAGE_ICONS,
+		MAP_LEAF_IMAGE_ICONS,
 		TREE_GRAY_COLOR,
 		TREE_YELLOW_COLOR,
 		TREE_ORANGE_COLOR,

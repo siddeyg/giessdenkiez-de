@@ -22,6 +22,7 @@ export function useMapSetup(
 		MAP_CENTER_LNG,
 		MAP_CENTER_LAT,
 		MAP_PUMP_IMAGE_ICONS,
+		MAP_LEAF_IMAGE_ICONS,
 		MAP_LOCATION_ZOOM_LEVEL,
 	} = useMapConstants();
 
@@ -105,6 +106,44 @@ export function useMapSetup(
 					"circle-color": circleColor,
 					"circle-stroke-width": circleStrokeWidth,
 				},
+			});
+
+			// Load leaf icons for species-specific tree symbols (shown at zoom ≥ 16).
+			// Images must be loaded before the symbol layer is added.
+			Promise.all(
+				MAP_LEAF_IMAGE_ICONS.map(
+					(img) =>
+						new Promise<void>((resolve) => {
+							initializedMap.loadImage(img.url, function (error, image) {
+								if (error || !image) {
+									resolve();
+									return;
+								}
+								initializedMap.addImage(img.id, image);
+								resolve();
+							});
+						}),
+				),
+			).then(() => {
+				initializedMap.addLayer({
+					id: "gdk-tree-icons",
+					type: "symbol",
+					source: "trees",
+					"source-layer": import.meta.env.VITE_MAPBOX_TREES_TILESET_LAYER,
+					minzoom: 16,
+					layout: {
+						"icon-image": ["get", "genus_icon"],
+						"icon-size": [
+							"interpolate",
+							["linear"],
+							["zoom"],
+							16, 0.12,
+							20, 0.35,
+						],
+						"icon-allow-overlap": false,
+						"icon-ignore-placement": false,
+					},
+				});
 			});
 
 			Promise.all(
