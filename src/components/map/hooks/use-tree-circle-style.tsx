@@ -2,6 +2,7 @@ import { Expression } from "mapbox-gl";
 import { useMapConstants } from "./use-map-constants.js";
 import resolveConfig from "tailwindcss/resolveConfig";
 import { useIsInVegetationPeriod } from "../../../utils/use-is-in-vegetation-period.js";
+import { DROUGHT_THRESHOLDS } from "../../../utils/drought-thresholds.js";
 
 //@ts-expect-error tailwindConfig has no type definition
 import tailwindConfig from "../../../../tailwind.config.js";
@@ -227,9 +228,9 @@ export function useTreeCircleStyle() {
 		const isThirstyTreeExpression: Expression = [
 			"case",
 			["==", ["get", "age"], ""], false,
-			["all", [">=", ["get", "age"], 0], ["<=", ["get", "age"], 5], ["<", ["get", "radolan_sum"], 100]], true,
-			["all", [">", ["get", "age"], 5], ["<=", ["get", "age"], 10], ["<", ["get", "radolan_sum"], 200]], true,
-			["all", [">", ["get", "age"], 10], ["<", ["get", "radolan_sum"], 300]], true,
+			["all", [">=", ["get", "age"], 0], ["<=", ["get", "age"], 5], ["<", ["get", "radolan_sum"], DROUGHT_THRESHOLDS.baby]], true,
+			["all", [">", ["get", "age"], 5], ["<=", ["get", "age"], 10], ["<", ["get", "radolan_sum"], DROUGHT_THRESHOLDS.junior]], true,
+			["all", [">", ["get", "age"], 10], ["<", ["get", "radolan_sum"], DROUGHT_THRESHOLDS.senior]], true,
 			false,
 		];
 
